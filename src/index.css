@@ -36,6 +36,7 @@ h1 {
 /*Upper Bar*/
 
 .bar{
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,9 +90,29 @@ h1 {
   width: 40vw;
   height: 25vh;
   background-color: #242424;
-  background-image: url(forest.jpeg);
   border-radius: 25px;
   transition: ease-in-out 0.5s;
+}
+
+#SnakeTHEgame{
+  background-image: url(snake.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#MyNextTravel{
+  background-image: url(travel.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#GoodToKnow{
+  background-image: url(mind.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#PhoneWidgets{
+  background-image: url(widget.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .box a{
