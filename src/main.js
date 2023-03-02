@@ -3,9 +3,11 @@ const message = document.querySelector('#textInput');
 const email = document.querySelector('#emailInput');
 
 const SendData = () => {
-  message.value = '';
+  if(message.value == '' || email.value == '') {
+    alert('Please fill in all fields');
+    return;
+  }
 }
 
 btn1.addEventListener('click', function() {
-  console.log('Hello World');
-});
+  SendData();});

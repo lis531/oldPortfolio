@@ -1,5 +1,6 @@
 function Contact() {
     return(
+
         <div className="contact" id="contact">
             <h1>Contact</h1>
             <input type="email" id="emailInput" placeholder="Email"></input>
