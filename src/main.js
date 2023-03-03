@@ -9,5 +9,5 @@ const SendData = () => {
   }
 }
 
-btn1.addEventListener('click', function() {
-  SendData();});
+btn1.addEventListener('click', SendData());
+
