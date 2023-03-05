@@ -63,12 +63,6 @@ h1 {
   align-items: center;
 }
 
-.wrapperMain{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .wrapper{
   display: flex;
   flex-direction: row;
@@ -76,7 +70,7 @@ h1 {
   align-items: center;
 }
 
-.wrapper div{
+.wrapper button{
   margin: 3rem;
 }
 
@@ -92,7 +86,9 @@ h1 {
   background-color: #242424;
   border-radius: 25px;
   transition: ease-in-out 0.5s;
-  transition: width 2s, height 4s;
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 #SnakeTHEgame{
@@ -152,13 +148,13 @@ h1 {
   width: 100%;
   background: #242424;
   color: #fff;
-  gap: 4vh;
+  gap: 3.5vh;
 }
 
 #emailInput{
   width: 60%;
   height: 5vh;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 1vh;
   font-size: 1.5rem;
   background-color: #242424;
@@ -173,7 +169,7 @@ h1 {
 #textInput{
   width: 60%;
   height: 20vh;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 1vh;
   font-size: 1.5rem;
   background-color: #242424;
@@ -188,7 +184,7 @@ h1 {
 #submitBtn{
   width: 50%;
   height: 5vh;
-  border-radius: 5px;
+  border-radius: 10px;
   border: none;
   padding: 1vh;
   font-size: 1.5rem;
@@ -207,4 +203,67 @@ h1 {
   padding: 2rem;
   background-color: #242424;
   color: #fff;
+}
+
+/*Modal*/
+
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  border: none;
+}
+
+.modal-content{
+  width: 60%;
+  max-width: 80%;
+  height: 40%;
+  background-color: #242424;
+  color: #fff;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.modal-content button{
+  width: 40%;
+  height: 5vh;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.7rem;
+  background-color: #545ceb;
+}
+
+.modal-content button:hover{
+  background-color: #3941d6;
+}
+
+body.active-modal{
+  overflow: hidden;
+}
+
+.modal-par{
+  font-size: 1.4rem;
+}
+.modal-header{
+  font-size: 2.7rem;
+}
+
+.active-modal .modal-content {
+  transform: translateY(0%);
+}
+
+.modal-content {
+  transform: translateY(-50%);
 }
