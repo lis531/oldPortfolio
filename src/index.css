@@ -23,7 +23,6 @@ a:hover {
 
 body {
   margin: 0 auto;
-  overflow-x: hidden;
   width: 100%;
 }
 
@@ -246,7 +245,7 @@ h1 {
   visibility: visible;
 }
 
-.modal-content{
+.modal-div{
   width: 70%;
   height: 40%;
   background-color: #242424;
@@ -254,26 +253,38 @@ h1 {
   border-radius: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  gap: 1rem;
-  overflow: hidden;
 }
 
-.modal-content button {
-  width: 40%;
-  height: 5vh;
+.modal-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-button{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.modal-button button{
+  margin-right: 1.5vh;
+  margin-top: 1.5vh;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 10px;
   border: none;
   font-size: 1.7rem;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
-  opacity: 0;
+  background-color: rgba(0, 0, 0, 0);
 }
 
-.modal-content button:hover{
-  background-color: #3941d6;
+.modal-button button:hover{
+  background-color: #353535;
 }
 
 .modal-par{
@@ -284,15 +295,16 @@ h1 {
 .modal-header{
   font-size: 2.7rem;
   width: 75%;
+  margin-top: 1vh;
 }
 
 .github-icon{
   display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
   border-radius: 50%;
-  font-size: 7vh;
+  font-size: 5rem;
+  margin-top: 4vh;
+  margin-bottom: 1vh;
   width: 100%;
   transition: ease-in-out 0.5s;
 }
@@ -348,7 +360,7 @@ h1 {
   .box span{
     font-size: 2.3rem;
   }
-  .modal-content{
+  .modal-div{
     width: 80%;
     height: 55%;
   }
@@ -361,8 +373,9 @@ h1 {
     width: 95%;
     margin: 0 auto;
   }
-  .modal-content button{
-    width: 50%;
-    height: 7vh;
+  .github-icon{
+    font-size: 4.5rem;
+    margin-top: 14vh;
+    margin-bottom: 1vh;
   }
 }

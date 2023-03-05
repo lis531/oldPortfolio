@@ -53,11 +53,15 @@ const Projects = () => {
       </div>
       <div className={modalClassName}>
         {modalVisible && (
-          <div className="modal-content">
-            <h2 className='modal-header'>{modalContent.header}</h2>
-            <p className='modal-par'>{modalContent.paragraph}</p>
-            <button className="close-btn" onClick={() => toggleModal()}>&times;</button>
-            <AiFillGithub className='github-icon' />
+          <div className='modal-div'>
+            <div className="modal-button">
+              <button onClick={() => toggleModal()}>&times;</button>
+            </div>
+            <div className="modal-content">
+              <h2 className='modal-header'>{modalContent.header}</h2>
+              <p className='modal-par'>{modalContent.paragraph}</p>
+              <AiFillGithub className='github-icon' />
+            </div>
           </div>
         )}
       </div>
