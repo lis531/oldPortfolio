@@ -219,11 +219,32 @@ h1 {
   align-items: center;
   z-index: 100;
   border: none;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.4s ease-in-out;
+
+}
+
+.content{
+  color: #fff;
+  background: #e74c3c;
+  position: relative;
+  border-radius: 3px;
+  margin: 0 auto;
+
+}
+
+.hidden{
+  visibility: hidden;
+  opacity: 0;
+}
+
+.show {
+    visibility: visible;
 }
 
 .modal-content{
-  width: 60%;
-  max-width: 80%;
+  width: 70%;
   height: 40%;
   background-color: #242424;
   color: #fff;
@@ -249,21 +270,38 @@ h1 {
   background-color: #3941d6;
 }
 
-body.active-modal{
+.modal.active-modal{
   overflow: hidden;
 }
 
 .modal-par{
   font-size: 1.4rem;
+  width: 75%;
 }
 .modal-header{
   font-size: 2.7rem;
+  width: 75%;
 }
 
-.active-modal .modal-content {
-  transform: translateY(0%);
-}
-
-.modal-content {
-  transform: translateY(-50%);
+@media screen and (max-width: 768px){
+  .wrapper{
+    flex-direction: column;
+  }
+  .box{
+    width: 80vw;
+    height: 20vh;
+  }
+  .box span{
+    font-size: 1.5rem;
+  }
+  .modal-content{
+    width: 80%;
+    height: 40%;
+  }
+  .modal-par{
+    font-size: 1.2rem;
+  }
+  .modal-header{
+    font-size: 2.2rem;
+  }
 }
