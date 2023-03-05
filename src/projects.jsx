@@ -21,7 +21,7 @@ const projectsInfo = {
 };
 
 const Projects = () => {
-  const [modalVisible, setModalVisible] = useState(false);
+  let [modalVisible, setModalVisible] = useState(false);
   const [modalContent, setModalContent] = useState({
     header: '',
     paragraph: ''
@@ -29,7 +29,13 @@ const Projects = () => {
 
   const toggleModal = (id) => {
     setModalVisible(!modalVisible);
-
+  
+    if (!modalVisible) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  
     if (id) {
       const { header, paragraph } = projectsInfo[id];
       setModalContent({ header, paragraph });
