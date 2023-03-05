@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { AiFillGithub } from 'react-icons/ai';
 
 const projectsInfo = {
   SnakeTHEgame: {
@@ -55,7 +56,8 @@ const Projects = () => {
           <div className="modal-content">
             <h2 className='modal-header'>{modalContent.header}</h2>
             <p className='modal-par'>{modalContent.paragraph}</p>
-            <button className="close-btn" onClick={() => toggleModal()}>CLOSE</button>
+            <button className="close-btn" onClick={() => toggleModal()}>&times;</button>
+            <AiFillGithub className='github-icon' />
           </div>
         )}
       </div>

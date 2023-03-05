@@ -45,8 +45,10 @@ h1 {
   background-color: #242424;
   color: #fff;
   text-align: center;
+  margin: 0;
+  padding: 0;
   gap: 12%;
-  height: 80px;
+  height: 13vh;
   font-size: 2rem;
 }
 
@@ -61,6 +63,10 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.aboutMe p{
+  width: 85%;
 }
 
 .wrapper{
@@ -123,14 +129,11 @@ h1 {
   border-radius: 25px;
   box-shadow: 15px 15px 1px 4px rgb(27, 27, 27);
   font-weight: 500;
+  cursor: pointer;
 }
 
 .box:hover{
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
-}
-
-.Projects{
-  width: 100%;
 }
 
 .Projects h1{
@@ -190,6 +193,7 @@ h1 {
   font-size: 1.5rem;
   background-color: #545ceb;
   transition: ease-in-out 0.5s;
+  cursor: pointer;
 }
 
 #submitBtn:hover{
@@ -231,7 +235,6 @@ h1 {
   position: relative;
   border-radius: 3px;
   margin: 0 auto;
-
 }
 
 .hidden{
@@ -240,7 +243,7 @@ h1 {
 }
 
 .show {
-    visibility: visible;
+  visibility: visible;
 }
 
 .modal-content{
@@ -255,53 +258,111 @@ h1 {
   align-items: center;
   text-align: center;
   gap: 1rem;
+  overflow: hidden;
 }
 
-.modal-content button{
+.modal-content button {
   width: 40%;
   height: 5vh;
   border-radius: 10px;
   border: none;
   font-size: 1.7rem;
-  background-color: #545ceb;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
 }
 
 .modal-content button:hover{
   background-color: #3941d6;
 }
 
-.modal.active-modal{
-  overflow: hidden;
-}
-
 .modal-par{
   font-size: 1.4rem;
   width: 75%;
+  height: 10vh;
 }
 .modal-header{
   font-size: 2.7rem;
   width: 75%;
 }
 
+.github-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 7vh;
+  width: 100%;
+  transition: ease-in-out 0.5s;
+}
+
+.github-icon:hover{
+  cursor: pointer;
+}
+
 @media screen and (max-width: 768px){
+  :root{
+    font-size: 15px;
+  }
   .wrapper{
     flex-direction: column;
   }
+  .wrapper button{
+    margin: 1rem;
+  }
+  .bar{
+    width: 100%;
+    font-size: 1.5rem;
+  }
   .box{
-    width: 80vw;
+    width: 90%;
     height: 20vh;
+    text-shadow: #111111 2px 3px 0px;
+  }
+  #emailInput{
+    width: 75%;
+    height: 5vh;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    background-color: #242424;
+    border: 1px solid #fff;
+    transition: ease-in-out 0.5s;
+  }
+  #textInput{
+    width: 75%;
+    height: 25vh;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    background-color: #242424;
+    border: 1px solid #fff;
+    transition: ease-in-out 0.5s;
+  }
+  #submitBtn{
+    width: 70%;
+    height: 7vh;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.5rem;
   }
   .box span{
-    font-size: 1.5rem;
+    font-size: 2.3rem;
   }
   .modal-content{
     width: 80%;
-    height: 40%;
+    height: 55%;
   }
   .modal-par{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    width: 90%;
   }
   .modal-header{
     font-size: 2.2rem;
+    width: 95%;
+    margin: 0 auto;
+  }
+  .modal-content button{
+    width: 50%;
+    height: 7vh;
   }
 }
