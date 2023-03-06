@@ -66,8 +66,8 @@ const Projects = () => {
             <div className="modal-content">
               <h2 className='modal-header'>{modalContent.header}</h2>
               <p className='modal-par'>{modalContent.paragraph}</p>
-              <AiFillGithub className='github-icon' />
             </div>
+            <AiFillGithub className='github-icon' />
           </div>
         )}
       </div>
