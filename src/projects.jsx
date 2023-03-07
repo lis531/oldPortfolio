@@ -4,19 +4,19 @@ import { AiFillGithub } from 'react-icons/ai';
 const projectsInfo = {
   SnakeTHEgame: {
     header: 'Snake the game',
-    paragraph: 'A simple snake game made with C# in Unity. The game will be released this year.'
+    paragraph: 'A snake game with some enhancements made using C# in Unity. Release in 2023.'
   },
   Calendar: {
     header: 'Calendar',
-    paragraph: 'A calendar made with HTML, CSS and JavaScript with a lot of statistics. TBA.'
+    paragraph: 'A calendar made with HTML, CSS and JavaScript with a lot of statistics like how much meetings till selected date ect. TBA.'
   },
   GoodToKnow: {
     header: 'GoodToKnow',
-    paragraph: 'An app made with HTML, CSS and JavaScript using OpenAI. TBA.'
+    paragraph: 'An app made with HTML, CSS and JavaScript using OpenAI to give you some interesting information everyday. TBA.'
   },
   PhoneWidgets: {
     header: 'Phone Widgets',
-    paragraph: 'An app made with ???. TBA.'
+    paragraph: 'An phone widgets app with cool and fresh looking widgets that will make your phone shine. App made with ???. TBA.'
   }
 };
 
