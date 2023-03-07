@@ -200,6 +200,7 @@ p{
   background-color: #545ceb;
   transition: ease-in-out 0.5s;
   cursor: pointer;
+  color: white;
 }
 
 #submitBtn:hover{
@@ -269,7 +270,6 @@ p{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1.5rem;
 }
 
 .modal-button{
@@ -300,6 +300,8 @@ p{
   font-size: 1.5rem;
   width: 75%;
   height: 10vh;
+  margin: 0;
+  margin-bottom: 1rem;
 }
 .modal-header{
   font-size: 3rem;
