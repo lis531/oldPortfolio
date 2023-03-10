@@ -17,6 +17,10 @@ const projectsInfo = {
   PhoneWidgets: {
     header: 'Phone Widgets',
     paragraph: 'An phone widgets app with cool and fresh looking widgets that will make your phone shine. App made with ???. TBA.'
+  },
+  DiscordBot: {
+    header: 'Discord Bot',
+    paragraph: 'A discord bot made with JavaScript using discord.js library. TBA.'
   }
 };
 
@@ -55,6 +59,9 @@ const Projects = () => {
         <div className="wrapper">
           <button className="box" id="GoodToKnow" onClick={() => toggleModal('GoodToKnow')}><span>GoodToKnow</span></button>
           <button className="box" id="PhoneWidgets" onClick={() => toggleModal('PhoneWidgets')}><span>Phone Widgets</span></button>
+        </div>
+        <div className="wrapper">
+          <button className="box" id="DiscordBot" onClick={() => toggleModal('DiscordBot')}><span>DiscordBot</span></button>
         </div>
       </div>
       <div className={modalClassName}>
