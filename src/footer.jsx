@@ -1,7 +1,8 @@
 function Footer() {
+    let time = new Date().getFullYear();
     return (
         <div className="footer">
-            Copyright © 2023 | Borys Gajewski | All Rights Reserved
+            Copyright © {time} | Borys Gajewski | All Rights Reserved
         </div>
     )
 }

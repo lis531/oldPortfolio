@@ -1,9 +1,9 @@
+/*Main*/
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #1F1F1F;
 }
 
 html{
@@ -11,14 +11,14 @@ html{
 }
 
 a {
-  font-weight: 500;
-  color: #5b62e7;
+  font-weight: inherit;
+  color: #548DDE;
   text-decoration: inherit;
   transition: ease-in-out 0.5s;
 }
 
 a:hover {
-  color: #343bb6;
+  color: #2160D4;
 }
 
 body {
@@ -30,7 +30,9 @@ h1 {
   font-size: 3.2rem;
   line-height: 1.1;
   text-align: center;
+  font-weight: 400;
 }
+
 p{
   font-size: 1.5rem;
 }
@@ -40,28 +42,106 @@ p{
 .bar{
   position: fixed;
   display: flex;
-  justify-content: center;
+  width: 100%;
+  background-color: #161616;
+  filter: drop-shadow(0 5px 0.75rem #161616);
+  text-align: center;
+  height: 15vh;
+  font-size: 2.7rem;
+  z-index: 90;
+}
+
+.barStatic{
+  display: flex;
+  width: 100%;
+  height: 15vh;
+}
+
+.div1{
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
-  flex-wrap: wrap;
-  background-color: #161616;
-  color: #fff;
-  filter: drop-shadow(0 0 2rem #131313);
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  gap: 12%;
-  height: 13vh;
+  height: 100%;
+  font-size: 2.7rem;
+  gap: 10vw;
+  margin-left: 8vw;
+  font-weight: lighter;
+}
+
+.div2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 4vw;
+  gap: 2vw;
+}
+
+.modeChange{
+  background-color: #353535;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
   font-size: 2.5rem;
-  z-index: 9999;
+  height: 4rem;
+  width: 4rem;
+}
+
+.modeChange:hover{
+  background-color: #1F1F1F;
+}
+
+.dropbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #353535;
+  border-radius: 100px;
+  color: white;
+  width: 8rem;
+  height: 4rem;
+  border: none;
+  cursor: pointer;
+  font-size: 2.5rem;
+  transition: ease-in-out 0.5s;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #1F1F1F;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color:black; 
+  padding:12px; 
+  text-decoration:none; 
+  display:block
 }
 
 /*About Me*/
 
 .aboutMe{
   width: 100%;
-  height: 50vh;
-  background-color: #242424;
+  height: 35vh;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -71,6 +151,32 @@ p{
 
 .aboutMe p{
   width: 85%;
+}
+
+/*Projects*/
+
+.Projects h1{
+  padding: 2rem;
+}
+
+.box{
+  font-size: 3.2em;
+  text-shadow: 0px 0px 1px rgb(29, 29, 29), 0 0 0.5rem rgb(32, 32, 32), 0 0 0.5rem rgb(48, 48, 48);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+  height: 25vh;
+  background-color: #161616;
+  border-radius: 25px;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: ease-in-out 0.5s;
+  z-index: 1;
 }
 
 .wrapper{
@@ -84,24 +190,28 @@ p{
   margin: 4vh;
 }
 
-.box{
-  font-size: 3.2em;
-  text-shadow: #1d1d1d 3px 3px 3px;
+.box span{
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 40vw;
-  height: 25vh;
-  background-color: #242424;
+  text-align: center;
+  color: #68B6F2;
+  width: 100%;
+  height: 100%;
   border-radius: 25px;
-  border: none;
-  margin: 0;
-  padding: 0;
-  background-repeat: no-repeat;
-  background-size: cover;
+  box-shadow: 15px 15px 1px 5px #161616;
+  font-weight: 500;
+  cursor: pointer;
   transition: ease-in-out 0.5s;
-  z-index: 1;
+}
+
+.box:hover{
+  box-shadow: inset 0 0 0 1200px rgba(0, 0, 0, 0.5);
+}
+
+.box span:hover{
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
 }
 
 #SnakeTHEgame{
@@ -120,34 +230,6 @@ p{
   background-image: url(discord.png);
 }
 
-.box span{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: rgb(128, 199, 223);
-  width: 100%;
-  height: 100%;
-  border-radius: 25px;
-  box-shadow: 15px 15px 1px 4px rgb(27, 27, 27);
-  font-weight: 500;
-  cursor: pointer;
-  transition: ease-in-out 0.5s;
-}
-
-.box:hover{
-  box-shadow: inset 0 0 0 1200px rgba(0, 0, 0, 0.5);
-}
-
-.box span:hover{
-  -webkit-backdrop-filter: blur(2px);
-  backdrop-filter: blur(2px);
-}
-
-.Projects h1{
-  padding: 2rem;
-}
-
 /*Contact*/
 
 .contact{
@@ -157,41 +239,40 @@ p{
   justify-content: center;
   height: 100vh;
   width: 100%;
-  background: #242424;
   color: #fff;
   gap: 3.5vh;
 }
 
 #emailInput{
+  background-color: #1B1B1B;
   width: 60%;
   max-width: 1000px;
   height: 5vh;
   border-radius: 10px;
   padding: 1vh;
   font-size: 1.5rem;
-  background-color: #242424;
   border: 1px solid #fff;
   transition: ease-in-out 0.5s;
 }
 
 #emailInput:hover{
-  border: 1px solid #646cff;
+  border-color: #2160D4;
 }
 
 #textInput{
+  background-color: #1B1B1B;
   width: 60%;
   max-width: 1000px;
   height: 20vh;
   border-radius: 10px;
   padding: 1vh;
   font-size: 1.5rem;
-  background-color: #242424;
   border: 1px solid #fff;
   transition: ease-in-out 0.5s;
 }
 
 #textInput:hover{
-  border: 1px solid #646cff;
+  border-color: #2160D4;
 }
 
 #submitBtn{
@@ -202,25 +283,24 @@ p{
   border: none;
   margin: 2vh;
   font-size: 1.5rem;
-  background-color: #545ceb;
+  background-color: #548DDE;
   transition: ease-in-out 0.5s;
   cursor: pointer;
   color: white;
 }
 
 #submitBtn:hover{
-  background-color: #3941d6;
+  background-color: #2160D4;
 }
 
 /*Footer*/
 
 .footer{
   text-align: center;
-  background-color: #242424;
   color: #fff;
   font-size: 1.5rem;
   width: 100%;
-  margin-bottom: 4vh;
+  margin-bottom: 2vh;
 }
 
 /*Modal*/
@@ -239,30 +319,13 @@ p{
   visibility: visible;
   overflow: hidden;
   transition: all 0.4s ease-in-out;
-  z-index: 2;
-}
-
-.content{
-  color: #fff;
-  background: #e74c3c;
-  position: relative;
-  border-radius: 3px;
-  margin: 0 auto;
-}
-
-.hidden{
-  visibility: hidden;
-  opacity: 0;
-}
-
-.show {
-  visibility: visible;
+  z-index: 100;
 }
 
 .modal-div{
-  width: 70%;
-  height: 40%;
-  background-color: #242424;
+  max-width: fit-content;
+  max-height: fit-content;
+  background-color: #1B1B1B;
   color: #fff;
   border-radius: 30px;
   display: flex;
@@ -308,12 +371,13 @@ p{
   width: 75%;
   height: 10vh;
   margin: 0;
-  margin-bottom: 1rem;
 }
+
 .modal-header{
   font-size: 3rem;
   width: 75%;
-  margin-top: 1vh;
+  margin-top: 0;
+  margin-bottom: 2vh;
 }
 
 .github-icon{
@@ -321,7 +385,7 @@ p{
   font-size: 5rem;
   transition: ease-in-out 0.5s;
   margin-top: auto;
-  margin-bottom: 2rem;
+  margin-block-end: 2vh;
 }
 
 .github-icon:hover{
@@ -329,41 +393,83 @@ p{
   filter: contrast(0.3);
 }
 
+.hidden{
+  visibility: hidden;
+  opacity: 0;
+}
+
+.show {
+  visibility: visible;
+}
+
+/*Responsywność*/
+
+/*Height*/
+
 @media screen and (max-height: 850px){
+  .div1{
+    font-size: 2rem;
+  }
   .wrapper{
     flex-direction: column;
   }
   .wrapper button{
-    margin: 1rem;
+    margin: 3vh;
   }
   .box{
     width: 90%;
-    height: 20vh;
+    height: 40vh;
+  }
+  .modal-div{
+    width: 80vw auto;
+    height: 60vh;
+  }
+  .github-icon{
+    font-size: 4.5rem;
   }
   #emailInput{
     width: 75%;
-    height: 5vh;
+    height: 7vh;
     border-radius: 10px;
     font-size: 1.5rem;
   }
   #textInput{
     width: 75%;
-    height: 25vh;
+    height: 30vh;
     border-radius: 10px;
     font-size: 1.5rem;
   }
   #submitBtn{
     width: 40%;
-    height: 7vh;
+    height: 8vh;
     border-radius: 10px;
     font-size: 1.5rem;
   }
   .footer{
-    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+  .dropbtn{
+    width: 5rem;
+    height: 2.5rem;
+  }
+  .modeChange{
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .contact{
+    margin: 0;
+  }
+  .div1{
+    gap: 5vw;
   }
 }
 
+/*Width*/
+
 @media screen and (max-width: 850px){
+  .div1{
+    font-size: 2rem;
+  }
   :root{
     font-size: 15px;
   }
@@ -371,16 +477,11 @@ p{
     flex-direction: column;
   }
   .wrapper button{
-    margin: 1rem;
-  }
-  .bar{
-    width: 100%;
-    font-size: 1.5rem;
+    margin: 2vw;
   }
   .box{
     width: 90%;
     height: 20vh;
-    text-shadow: #111111 2px 3px 0px;
   }
   #emailInput{
     width: 75%;
@@ -405,8 +506,8 @@ p{
     font-size: 2.5rem;
   }
   .modal-div{
-    width: 80%;
-    height: 55%;
+    width: 80vw;
+    height: 30vh auto;
   }
   .modal-par{
     font-size: 1.4rem;
@@ -420,10 +521,24 @@ p{
   .github-icon{
     font-size: 4.5rem;
   }
-  .aboutMe{
-    height: 60vh;
-  }
   .modal-content{
-    margin: 3rem;
+    gap: 3vh;
+  }
+  .dropbtn{
+    width: 5rem;
+    height: 2.5rem;
+  }
+  .modeChange{
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .contact{
+    margin: 0;
+  }
+  .footer{
+    font-size: 1rem;
+  }
+  .div1{
+    gap: 5vw;
   }
 }
