@@ -3,7 +3,15 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
   color-scheme: light dark;
-  background-color: #1F1F1F;
+  background-color: var(--color-background);
+
+  --color-background: #e0e0e0;
+  --font-color: #1F1F1F;
+  --bar-color: #161616;
+  --box-shadow-color: #161616;
+  --text-shadow-color: #353535;
+  --input-color: #1B1B1B;
+  transition: ease-in-out 500ms;
 }
 
 html{
@@ -31,10 +39,15 @@ h1 {
   line-height: 1.1;
   text-align: center;
   font-weight: 400;
+  color: var(--font-color);
+  transition: ease-in-out 500ms;
+  margin: 1vh;
 }
 
 p{
   font-size: 1.5rem;
+  color: var(--font-color);
+  transition: ease-in-out 500ms;
 }
 
 /*Upper Bar*/
@@ -43,18 +56,20 @@ p{
   position: fixed;
   display: flex;
   width: 100%;
-  background-color: #161616;
+  background-color: var(--bar-color);
   filter: drop-shadow(0 5px 0.75rem #161616);
   text-align: center;
   height: 15vh;
   font-size: 2.7rem;
   z-index: 90;
+  transition: ease-in-out 500ms;
 }
 
 .barStatic{
   display: flex;
   width: 100%;
   height: 15vh;
+  margin-bottom: 10vh;
 }
 
 .div1{
@@ -78,13 +93,13 @@ p{
 }
 
 .modeChange{
-  background-color: #353535;
+  background-color: var(--text-shadow-color);
   border-radius: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
-  color: #ffffff;
+  color: var(--font-color);
   cursor: pointer;
   transition: ease-in-out 0.5s;
   font-size: 2.5rem;
@@ -102,7 +117,7 @@ p{
   align-items: center;
   background-color: #353535;
   border-radius: 100px;
-  color: white;
+  color: var(--font-color);
   width: 8rem;
   height: 4rem;
   border: none;
@@ -141,7 +156,6 @@ p{
 
 .aboutMe{
   width: 100%;
-  height: 35vh;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -151,24 +165,27 @@ p{
 
 .aboutMe p{
   width: 85%;
+  margin-bottom: 10vh;
 }
 
 /*Projects*/
 
 .Projects h1{
-  padding: 2rem;
+  padding: 3vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .box{
   font-size: 3.2em;
-  text-shadow: 0px 0px 1px rgb(29, 29, 29), 0 0 0.5rem rgb(32, 32, 32), 0 0 0.5rem rgb(48, 48, 48);
+  text-shadow: 0px 0px 10px var(--text-shadow-color), 0px 0px 10px var(--text-shadow-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 40vw;
   height: 25vh;
-  background-color: #161616;
   border-radius: 25px;
   border: none;
   margin: 0;
@@ -199,7 +216,7 @@ p{
   width: 100%;
   height: 100%;
   border-radius: 25px;
-  box-shadow: 15px 15px 1px 5px #161616;
+  box-shadow: 15px 15px 1px 5px var(--box-shadow-color);
   font-weight: 500;
   cursor: pointer;
   transition: ease-in-out 0.5s;
@@ -239,20 +256,22 @@ p{
   justify-content: center;
   height: 100vh;
   width: 100%;
-  color: #fff;
+  color: var(--font-color);
   gap: 3.5vh;
+  margin: 0;
 }
 
 #emailInput{
-  background-color: #1B1B1B;
+  background-color: var(--input-color);
   width: 60%;
   max-width: 1000px;
   height: 5vh;
   border-radius: 10px;
   padding: 1vh;
   font-size: 1.5rem;
-  border: 1px solid #fff;
+  border: none;
   transition: ease-in-out 0.5s;
+  box-shadow: 15px 15px 1px 5px var(--box-shadow-color);
 }
 
 #emailInput:hover{
@@ -260,15 +279,16 @@ p{
 }
 
 #textInput{
-  background-color: #1B1B1B;
+  background-color: var(--input-color);
   width: 60%;
   max-width: 1000px;
   height: 20vh;
   border-radius: 10px;
   padding: 1vh;
+  border: none;
   font-size: 1.5rem;
-  border: 1px solid #fff;
   transition: ease-in-out 0.5s;
+  box-shadow: 15px 15px 1px 5px var(--box-shadow-color);
 }
 
 #textInput:hover{
@@ -286,7 +306,7 @@ p{
   background-color: #548DDE;
   transition: ease-in-out 0.5s;
   cursor: pointer;
-  color: white;
+  color: var(--font-color);
 }
 
 #submitBtn:hover{
@@ -297,10 +317,11 @@ p{
 
 .footer{
   text-align: center;
-  color: #fff;
+  color: var(--font-color);
   font-size: 1.5rem;
   width: 100%;
   margin-bottom: 2vh;
+  transition: ease-in-out 500ms;
 }
 
 /*Modal*/
@@ -323,10 +344,13 @@ p{
 }
 
 .modal-div{
+  max-width: -moz-fit-content;
+  max-height: -moz-fit-content;
   max-width: fit-content;
   max-height: fit-content;
-  background-color: #1B1B1B;
-  color: #fff;
+  width: 80vw;
+  background-color: var(--input-color);
+  color: var(--font-color);
   border-radius: 30px;
   display: flex;
   flex-direction: column;
@@ -357,7 +381,7 @@ p{
   border: none;
   font-size: 2rem;
   cursor: pointer;
-  color: white;
+  color: var(--font-color);
   transition: all 0.5s ease-in-out;
   background-color: rgba(0, 0, 0, 0);
 }
@@ -369,7 +393,6 @@ p{
 .modal-par{
   font-size: 1.5rem;
   width: 75%;
-  height: 10vh;
   margin: 0;
 }
 
@@ -420,16 +443,12 @@ p{
     width: 90%;
     height: 40vh;
   }
-  .modal-div{
-    width: 80vw auto;
-    height: 60vh;
-  }
   .github-icon{
     font-size: 4.5rem;
   }
   #emailInput{
     width: 75%;
-    height: 7vh;
+    height: 10vh;
     border-radius: 10px;
     font-size: 1.5rem;
   }
@@ -441,7 +460,7 @@ p{
   }
   #submitBtn{
     width: 40%;
-    height: 8vh;
+    height: 10vh;
     border-radius: 10px;
     font-size: 1.5rem;
   }
@@ -456,9 +475,6 @@ p{
     width: 2.5rem;
     height: 2.5rem;
   }
-  .contact{
-    margin: 0;
-  }
   .div1{
     gap: 5vw;
   }
@@ -471,7 +487,7 @@ p{
     font-size: 2rem;
   }
   :root{
-    font-size: 15px;
+    font-size: 0.9rem;
   }
   .wrapper{
     flex-direction: column;
@@ -485,7 +501,7 @@ p{
   }
   #emailInput{
     width: 75%;
-    height: 5vh;
+    height: 10vh;
     border-radius: 10px;
     font-size: 1.5rem;
   }
@@ -497,17 +513,13 @@ p{
   }
   #submitBtn{
     width: 60%;
-    height: 7vh;
+    height: 10vh;
     border-radius: 10px;
     border: none;
     font-size: 1.5rem;
   }
   .box span{
     font-size: 2.5rem;
-  }
-  .modal-div{
-    width: 80vw;
-    height: 30vh auto;
   }
   .modal-par{
     font-size: 1.4rem;
@@ -531,9 +543,6 @@ p{
   .modeChange{
     width: 2.5rem;
     height: 2.5rem;
-  }
-  .contact{
-    margin: 0;
   }
   .footer{
     font-size: 1rem;
