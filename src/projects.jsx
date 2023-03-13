@@ -8,7 +8,7 @@ const projectsInfo = {
   },
   Calendar: {
     header: 'Calendar',
-    paragraph: 'A calendar made with HTML, CSS and JavaScript with a lot of statistics like how much meetings till selected date ect. TBA.'
+    paragraph: 'A calendar made with HTML, CSS and JavaScript with a lot of statistics for example: how much meetings left till the end of the year ect. TBA.'
   },
   GoodToKnow: {
     header: 'GoodToKnow',
@@ -16,11 +16,11 @@ const projectsInfo = {
   },
   PhoneWidgets: {
     header: 'Phone Widgets',
-    paragraph: 'An phone widgets app with cool and fresh looking widgets that will make your phone shine. App made with ???. TBA.'
+    paragraph: 'Phone widgets app with cool and fresh looking widgets that will make your phone shine. App made with ???. TBA.'
   },
   DiscordBot: {
     header: 'Discord Bot',
-    paragraph: 'A discord bot made with JavaScript using discord.js library. TBA.'
+    paragraph: 'A discord bot made with JavaScript using discord.js library. 2023.'
   }
 };
 

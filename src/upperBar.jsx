@@ -17,9 +17,9 @@ function upperBar() {
     }
     else {
         document.documentElement.style.setProperty('--font-color', '#1F1F1F');
-        document.documentElement.style.setProperty('--color-background', '#e0e0e0');
-        document.documentElement.style.setProperty('--bar-color', '#e9e9e9');
-        document.documentElement.style.setProperty('--box-shadow-color', '#e9e9e9');
+        document.documentElement.style.setProperty('--color-background', '#e9e9e9');
+        document.documentElement.style.setProperty('--bar-color', '#e0e0e0');
+        document.documentElement.style.setProperty('--box-shadow-color', '#e0e0e0');
         document.documentElement.style.setProperty('--text-shadow-color', '#cacaca');
         document.documentElement.style.setProperty('--input-color', '#e4e4e4');
     }
