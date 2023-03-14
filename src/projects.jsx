@@ -1,26 +1,37 @@
 import React, { useState } from 'react';
 import { AiFillGithub } from 'react-icons/ai';
+import { TbBrandGooglePlay } from 'react-icons/tb';
 
 const projectsInfo = {
   SnakeTHEgame: {
     header: 'Snake the game',
-    paragraph: 'A snake game with some enhancements made using C# in Unity. Release in 2023.'
+    paragraph: 'A snake game with some enhancements made using C# in Unity. Release in 2023.',
+    href: 'https://github.com/lis531/SnakeTHEgame',
+    try: ''
   },
   Calendar: {
     header: 'Calendar',
-    paragraph: 'A calendar made with HTML, CSS and JavaScript with a lot of statistics for example: how much meetings left till the end of the year ect. TBA.'
+    paragraph: 'A calendar made with HTML, CSS and JavaScript with a lot of statistics for example: how much meetings left till the end of the year ect. TBA.',
+    href: 'https://github.com/lis531/Calendar',
+    try: ''
   },
   GoodToKnow: {
     header: 'GoodToKnow',
-    paragraph: 'An app made with HTML, CSS and JavaScript using OpenAI to give you some interesting information everyday. TBA.'
+    paragraph: 'An app made with HTML, CSS and JavaScript using OpenAI to give you some interesting information everyday. TBA.',
+    href: 'https://github.com/lis531/GoodToKnow',
+    tryOut: ''
   },
   PhoneWidgets: {
     header: 'Phone Widgets',
-    paragraph: 'Phone widgets app with cool and fresh looking widgets that will make your phone shine. App made with ???. TBA.'
+    paragraph: 'Phone widgets app with cool and fresh looking widgets that will make your phone shine. App made with ???. TBA.',
+    href: 'https://github.com/lis531/PhoneWidgets',
+    tryOut: ''
   },
   DiscordBot: {
     header: 'Discord Bot',
-    paragraph: 'A discord bot made with JavaScript using discord.js library. 2023.'
+    paragraph: 'A discord bot made with JavaScript using discord.js library. 2023.',
+    href: 'https://github.com/lis531/DiscordBot',
+    tryOut: ''
   }
 };
 
@@ -28,7 +39,9 @@ const Projects = () => {
   let [modalVisible, setModalVisible] = useState(false);
   const [modalContent, setModalContent] = useState({
     header: '',
-    paragraph: ''
+    paragraph: '',
+    href: '',
+    tryOut: ''
   });
 
   const toggleModal = (id) => {
@@ -41,8 +54,8 @@ const Projects = () => {
     }
   
     if (id) {
-      const { header, paragraph } = projectsInfo[id];
-      setModalContent({ header, paragraph });
+      const { header, paragraph, href, tryOut } = projectsInfo[id];
+      setModalContent({ header, paragraph, href, tryOut });
     }
   };
 
@@ -74,7 +87,10 @@ const Projects = () => {
               <h2 className='modal-header'>{modalContent.header}</h2>
               <p className='modal-par'>{modalContent.paragraph}</p>
             </div>
-            <AiFillGithub className='github-icon' />
+            <div className='icons-wrapper'>
+              <a href={modalContent.href} style={{all: 'inherit'}}><AiFillGithub className='github-icon' /></a>
+              <a href={modalContent.tryOut} style={{all: 'inherit'}}><TbBrandGooglePlay className='github-icon' /></a>
+            </div>
           </div>
         )}
       </div>

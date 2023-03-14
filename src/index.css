@@ -264,6 +264,7 @@ p{
 
 #emailInput{
   background-color: var(--input-color);
+  color: var(--font-color);
   width: 60%;
   max-width: 1000px;
   height: 5vh;
@@ -281,6 +282,7 @@ p{
 
 #textInput{
   background-color: var(--input-color);
+  color: var(--font-color);
   width: 60%;
   max-width: 1000px;
   height: 20vh;
@@ -404,6 +406,15 @@ p{
   margin-bottom: 2vh;
 }
 
+.icons-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+  margin-top: 2vh;
+}
+
 .github-icon{
   cursor: pointer;
   font-size: 5rem;
@@ -477,11 +488,14 @@ p{
 
 /*Width*/
 
-@media screen and (max-width: 850px){
+@media screen and (max-width: 800px){
   .div1{
-    font-size: 2.3rem;
+    font-size: 2rem;
     gap: 3vw;
-    margin-left: 5vw;
+    margin-left: 4vw;
+  }
+  .div2{
+    margin-right: 2vw;
   }
   .wrapper{
     flex-direction: column;
@@ -495,19 +509,15 @@ p{
   }
   #emailInput{
     width: 75%;
-    height: 10vh;
-    border-radius: 10px;
-    font-size: 1.5rem;
+    height: 8vh;
   }
   #textInput{
     width: 75%;
-    height: 25vh;
-    border-radius: 10px;
-    font-size: 1.5rem;
+    height: 22vh;
   }
   #submitBtn{
-    width: 60%;
-    height: 10vh;
+    width: 65%;
+    height: 7vh;
     border-radius: 10px;
     border: none;
     font-size: 1.5rem;
@@ -539,6 +549,6 @@ p{
     height: 2.5rem;
   }
   .footer{
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
