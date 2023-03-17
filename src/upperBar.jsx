@@ -29,9 +29,9 @@ function upperBar() {
             <div className="barStatic">
                 <div className="bar">
                     <div className="div1">
-                        <a href="#home">Home</a>
-                        <a href="#projects">Projects</a>
-                        <a href="#contact">Contact</a>
+                        <a href="#home" className="hover-animation">Home</a>
+                        <a href="#projects" className="hover-animation">Projects</a>
+                        <a href="#contact" className="hover-animation">Contact</a>
                     </div>
                     <div className='div2'>
                         <button className="modeChange" onClick={() => {
