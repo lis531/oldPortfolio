@@ -4,13 +4,14 @@
   font-weight: 400;
   color-scheme: light dark;
   background-color: var(--color-background);
-  --color-background: #e0e0e0;
-  --font-color: #1F1F1F;
+  --color-background: #1F1F1F;
+  --font-color: #e0e0e0;
   --bar-color: #161616;
   --box-shadow-color: #161616;
   --text-shadow-color: #353535;
   --input-color: #1B1B1B;
   transition: ease-in-out 500ms;
+
 }
 
 html{
@@ -31,6 +32,18 @@ a:hover {
 body {
   margin: 0;
   width: 100%;
+}
+
+body::-webkit-scrollbar{
+  width: 0.7rem;
+}
+
+body::-webkit-scrollbar-track{
+  background: var(--bar-color);
+}
+
+body::-webkit-scrollbar-thumb{
+  background: var(--text-shadow-color);
 }
 
 h1 {
@@ -56,7 +69,7 @@ p{
   display: flex;
   width: 100%;
   background-color: var(--bar-color);
-  filter: drop-shadow(0 5px 0.75rem var(--box-shadow-color));
+  filter: drop-shadow(0 5px 0.5rem var(--box-shadow-color));
   text-align: center;
   height: 15vh;
   font-size: 2.7rem;
@@ -76,9 +89,10 @@ p{
   width: 100%;
   transform: scaleX(0);
   height: 2px;
+  border-radius: 10px;
   bottom: 0;
   left: 0;
-  background-color: var(--font-color);
+  background-color: #0087ca;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -202,7 +216,7 @@ p{
 
 .box{
   font-size: 3.2em;
-  text-shadow: 2px 2px #548DDE, 4px 4px #68B6F2;
+  text-shadow: 0px 0px 8px #548DDE, 0px 0px 8px #68B6F2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -434,22 +448,44 @@ p{
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   gap: 2vh;
   margin-top: 2vh;
 }
 
-.github-icon{
-  cursor: pointer;
-  font-size: 5rem;
-  transition: ease-in-out 0.5s;
+.modal-icon{
   margin-top: auto;
   margin-block-end: 2vh;
 }
 
-.github-icon:hover{
+.iconButton{
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: var(--font-color);
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+  font-size: 2.5rem;
+  height: 4rem;
+  width: 4rem;
+}
+
+.icon{
+  cursor: pointer;
+  font-size: 5rem;
+  transition: ease-in-out 0.5s;
+}
+
+.icon:hover{
   cursor: pointer;
   filter: contrast(0.3);
+}
+
+.icon{
+
 }
 
 .hidden{

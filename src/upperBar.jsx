@@ -8,19 +8,19 @@ function upperBar() {
     const [state, setState] = useState("light");
     //change --font-color and --color-background of the page to dark or light respectively
     if (state === "light") {
-        document.documentElement.style.setProperty('--font-color', '#e0e0e0');
         document.documentElement.style.setProperty('--color-background', '#1F1F1F');
+        document.documentElement.style.setProperty('--font-color', '#e0e0e0');
         document.documentElement.style.setProperty('--bar-color', '#161616');
         document.documentElement.style.setProperty('--box-shadow-color', '#161616');
         document.documentElement.style.setProperty('--text-shadow-color', '#353535');
         document.documentElement.style.setProperty('--input-color', '#1B1B1B');
     }
     else {
-        document.documentElement.style.setProperty('--font-color', '#1F1F1F');
         document.documentElement.style.setProperty('--color-background', '#e9e9e9');
-        document.documentElement.style.setProperty('--bar-color', '#e0e0e0');
-        document.documentElement.style.setProperty('--box-shadow-color', '#e0e0e0');
-        document.documentElement.style.setProperty('--text-shadow-color', '#cacaca');
+        document.documentElement.style.setProperty('--font-color', '#1F1F1F');
+        document.documentElement.style.setProperty('--bar-color', '#d9d9d9');
+        document.documentElement.style.setProperty('--box-shadow-color', '#d9d9d9');
+        document.documentElement.style.setProperty('--text-shadow-color', '#bababa');
         document.documentElement.style.setProperty('--input-color', '#e4e4e4');
     }
 

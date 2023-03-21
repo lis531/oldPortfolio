@@ -88,8 +88,8 @@ const Projects = () => {
               <p className='modal-par'>{modalContent.paragraph}</p>
             </div>
             <div className='icons-wrapper'>
-              <a href={modalContent.href} style={{all: 'inherit'}}><AiFillGithub className='github-icon' /></a>
-              <a href={modalContent.tryOut} style={{all: 'inherit'}}><TbBrandGooglePlay className='github-icon' /></a>
+              <a href={modalContent.href} style={{all: 'inherit'}}><AiFillGithub className='icon modal-icon' /></a>
+              <a href={modalContent.tryOut} style={{all: 'inherit'}}><TbBrandGooglePlay className='icon modal-icon' /></a>
             </div>
           </div>
         )}
