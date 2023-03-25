@@ -26,27 +26,25 @@ function upperBar() {
 
     return(
         <>
-            <div className="barStatic">
-                <div className="bar">
-                    <div className="div1">
-                        <a href="#home" className="hover-animation">Home</a>
-                        <a href="#projects" className="hover-animation">Projects</a>
-                        <a href="#contact" className="hover-animation">Contact</a>
-                    </div>
-                    <div className='div2'>
-                        <button className="modeChange" onClick={() => {
-                            setColorMode(colorMode === "light" ? "dark" : "light");
-                            setState(colorMode === "light" ? "dark" : "light");
-                        }}><VscColorMode /></button>
-                        {/*<div className="dropdown">
-                            <button className="dropbtn"><HiOutlineArrowDown/></button>
-                            <div className="dropdown-content">
-                                <a href="#">Link</a>
-                                <a href="#">Link</a>
-                                <a href="#">Link</a>
-                            </div>
-                        </div>*/}
-                    </div>
+            <div className="bar">
+                <div className="barPart1">
+                    <a href="#home" className="hover-animation">Home</a>
+                    <a href="#projects" className="hover-animation">Projects</a>
+                    <a href="#contact" className="hover-animation">Contact</a>
+                </div>
+                <div className='barPart2'>
+                    <button className="clickableIcon icon modeChange" onClick={() => {
+                        setColorMode(colorMode === "light" ? "dark" : "light");
+                        setState(colorMode === "light" ? "dark" : "light");
+                    }}><VscColorMode className='modeChangeIcon'/></button>
+                    {/*<div className="dropdown">
+                        <button className="dropbtn"><HiOutlineArrowDown/></button>
+                        <div className="dropdown-content">
+                            <a href="#">Link</a>
+                            <a href="#">Link</a>
+                            <a href="#">Link</a>
+                        </div>
+                    </div>*/}
                 </div>
             </div>
         </>

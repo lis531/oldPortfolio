@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { AiFillGithub } from 'react-icons/ai';
 import { TbBrandGooglePlay } from 'react-icons/tb';
+import animations from './animations';
 
 const projectsInfo = {
   SnakeTHEgame: {
@@ -59,37 +60,44 @@ const Projects = () => {
     }
   };
 
+  const elements = useRef([]);
+  const addHoverAnimation = animations(elements);
+
+  useEffect(() => {
+    addHoverAnimation('anim');
+  }, [addHoverAnimation]);
+
   const modalClassName = `modal ${modalVisible ? '' : 'hidden'}`;
 
   return (
     <>
-      <div className="Projects" id="projects">
-        <h1>My Projects</h1>
+      <div className="Projects sitePart" id="projects">
+        <h1 ref={el => elements.current[0] = el}><span className="anim">M</span><span className="anim">y</span><span className='space'></span><span className="anim">P</span><span className="anim">r</span><span className="anim">o</span><span className="anim">j</span><span className="anim">e</span><span className="anim">c</span><span className="anim">t</span><span className="anim">s</span></h1>
         <div className="wrapper">
-          <button className="box" id="SnakeTHEgame" onClick={() => toggleModal('SnakeTHEgame')}><span>Snake the game</span></button>
-          <button className="box" id="Calendar" onClick={() => toggleModal('Calendar')}><span>Calendar</span></button>
+          <button className="box" id="SnakeTHEgame" onClick={() => toggleModal('SnakeTHEgame')} ref={el => elements.current[1] = el}><span><h3>Snake the game</h3></span></button>
+          <button className="box" id="Calendar" onClick={() => toggleModal('Calendar')} ref={el => elements.current[2] = el}><span><h3>Calendar</h3></span></button>
         </div>
         <div className="wrapper">
-          <button className="box" id="GoodToKnow" onClick={() => toggleModal('GoodToKnow')}><span>GoodToKnow</span></button>
-          <button className="box" id="PhoneWidgets" onClick={() => toggleModal('PhoneWidgets')}><span>Phone Widgets</span></button>
+          <button className="box" id="GoodToKnow" onClick={() => toggleModal('GoodToKnow')} ref={el => elements.current[3] = el}><span><h3>GoodToKnow</h3></span></button>
+          <button className="box" id="PhoneWidgets" onClick={() => toggleModal('PhoneWidgets')} ref={el => elements.current[4] = el}><span><h3>Phone Widgets</h3></span></button>
         </div>
         <div className="wrapper">
-          <button className="box" id="DiscordBot" onClick={() => toggleModal('DiscordBot')}><span>DiscordBot</span></button>
+          <button className="box" id="DiscordBot" onClick={() => toggleModal('DiscordBot')} ref={el => elements.current[5] = el}><span><h3>DiscordBot</h3></span></button>
         </div>
       </div>
       <div className={modalClassName}>
         {modalVisible && (
           <div className='modal-div'>
-            <div className="modal-button">
-              <button onClick={() => toggleModal()}>&times;</button>
-            </div>
             <div className="modal-content">
-              <h2 className='modal-header'>{modalContent.header}</h2>
+              <div>
+                <h2 className='modal-header'>{modalContent.header}</h2>
+                <button onClick={() => toggleModal()}>&times;</button>
+              </div>
               <p className='modal-par'>{modalContent.paragraph}</p>
             </div>
             <div className='icons-wrapper'>
-              <a href={modalContent.href} style={{all: 'inherit'}}><AiFillGithub className='icon modal-icon' /></a>
-              <a href={modalContent.tryOut} style={{all: 'inherit'}}><TbBrandGooglePlay className='icon modal-icon' /></a>
+              <a href={modalContent.href}><AiFillGithub className='modal-icon icon' /></a>
+              <a href={modalContent.tryOut}><TbBrandGooglePlay className='modal-icon icon' /></a>
             </div>
           </div>
         )}
