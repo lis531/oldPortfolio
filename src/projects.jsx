@@ -8,31 +8,36 @@ const projectsInfo = {
     header: 'Snake the game',
     paragraph: 'A snake game with some enhancements made using C# in Unity. Release in 2023.',
     href: 'https://github.com/lis531/SnakeTHEgame',
-    try: ''
+    tryOut: '',
+    tryOutStyle: { display: 'none' }
   },
   Calendar: {
     header: 'Calendar',
     paragraph: 'A calendar made with HTML, CSS and JavaScript with a lot of statistics for example: how much meetings left till the end of the year ect. TBA.',
     href: 'https://github.com/lis531/Calendar',
-    try: ''
+    tryOut: '',
+    tryOutStyle: { display: 'none' }
   },
   GoodToKnow: {
     header: 'GoodToKnow',
     paragraph: 'An app made with HTML, CSS and JavaScript using OpenAI to give you some interesting information everyday. TBA.',
     href: 'https://github.com/lis531/GoodToKnow',
-    tryOut: ''
+    tryOut: '',
+    tryOutStyle: { display: 'none' }
   },
   PhoneWidgets: {
     header: 'Phone Widgets',
-    paragraph: 'Phone widgets app with cool and fresh looking widgets that will make your phone shine. App made with ???. TBA.',
+    paragraph: 'Phone widgets app with cool and fresh looking widgets that will make your phone shine. App made with Kotlin. 2023.',
     href: 'https://github.com/lis531/PhoneWidgets',
-    tryOut: ''
+    tryOut: '',
+    tryOutStyle: { display: 'none' }
   },
   DiscordBot: {
     header: 'Discord Bot',
-    paragraph: 'A discord bot made with JavaScript using discord.js library. 2023.',
+    paragraph: 'A discord bot made using Python. 2023.',
     href: 'https://github.com/lis531/DiscordBot',
-    tryOut: ''
+    tryOut: '',
+    tryOutStyle: { display: 'none' }
   }
 };
 
@@ -42,7 +47,8 @@ const Projects = () => {
     header: '',
     paragraph: '',
     href: '',
-    tryOut: ''
+    tryOut: '',
+    tryOutStyle: '',
   });
 
   const toggleModal = (id) => {
@@ -55,8 +61,8 @@ const Projects = () => {
     }
   
     if (id) {
-      const { header, paragraph, href, tryOut } = projectsInfo[id];
-      setModalContent({ header, paragraph, href, tryOut });
+      const { header, paragraph, href, tryOut, tryOutStyle } = projectsInfo[id];
+      setModalContent({ header, paragraph, href, tryOut, tryOutStyle });
     }
   };
 
@@ -97,7 +103,7 @@ const Projects = () => {
             </div>
             <div className='icons-wrapper'>
               <a href={modalContent.href}><AiFillGithub className='modal-icon icon' /></a>
-              <a href={modalContent.tryOut}><TbBrandGooglePlay className='modal-icon icon' /></a>
+              <a href={modalContent.tryOut} style={modalContent.tryOutStyle}><TbBrandGooglePlay className='modal-icon icon' /></a>
             </div>
           </div>
         )}

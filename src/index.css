@@ -263,7 +263,7 @@ p{
   font-weight: 500;
   position: absolute;
   margin: 0;
-  text-shadow: 0.25rem 0.25rem 1px #353535;
+  text-shadow: 0.2rem 0.2rem 1px var(--text-shadow-color);
 }
 
 .animate {
@@ -540,6 +540,10 @@ svg{
   font-size: 15rem;
   height: 6rem;
   width: 6rem;
+}
+
+.iconButton:hover{
+  filter: contrast(0.2);
 }
 
 .clickableIcon{
