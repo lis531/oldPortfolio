@@ -532,7 +532,7 @@ svg{
 }
 
 .modal-icon:hover{
-  filter: contrast(0.2);
+  filter: contrast(0.1);
 }
 
 .iconButton{
@@ -543,7 +543,7 @@ svg{
 }
 
 .iconButton:hover{
-  filter: contrast(0.2);
+  filter: contrast(0.1);
 }
 
 .clickableIcon{
