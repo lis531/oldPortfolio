@@ -11,13 +11,6 @@ const projectsInfo = {
     tryOut: '',
     tryOutStyle: { display: 'none' }
   },
-  Calendar: {
-    header: 'Calendar',
-    paragraph: 'A calendar made with HTML, CSS and JavaScript with a lot of statistics for example: how much meetings left till the end of the year ect. TBA.',
-    href: 'https://github.com/lis531/Calendar',
-    tryOut: '',
-    tryOutStyle: { display: 'none' }
-  },
   GoodToKnow: {
     header: 'GoodToKnow',
     paragraph: 'An app made with HTML, CSS and JavaScript using OpenAI to give you some interesting information everyday. TBA.',
@@ -25,10 +18,10 @@ const projectsInfo = {
     tryOut: '',
     tryOutStyle: { display: 'none' }
   },
-  PhoneWidgets: {
-    header: 'Phone Widgets',
-    paragraph: 'Phone widgets app with cool and fresh looking widgets that will make your phone shine. App made with Kotlin. 2023.',
-    href: 'https://github.com/lis531/PhoneWidgets',
+  FPS: {
+    header: 'FPS',
+    paragraph: 'FPS game. App made with UE5. 2023.',
+    href: 'https://github.com/lis531/FPS',
     tryOut: '',
     tryOutStyle: { display: 'none' }
   },
@@ -81,14 +74,11 @@ const Projects = () => {
         <h1 ref={el => elements.current[0] = el}><span className="anim">M</span><span className="anim">y</span><span className='space'></span><span className="anim">P</span><span className="anim">r</span><span className="anim">o</span><span className="anim">j</span><span className="anim">e</span><span className="anim">c</span><span className="anim">t</span><span className="anim">s</span></h1>
         <div className="wrapper">
           <button className="box" id="SnakeTHEgame" onClick={() => toggleModal('SnakeTHEgame')} ref={el => elements.current[1] = el}><span><h3>Snake the game</h3></span></button>
-          <button className="box" id="Calendar" onClick={() => toggleModal('Calendar')} ref={el => elements.current[2] = el}><span><h3>Calendar</h3></span></button>
-        </div>
-        <div className="wrapper">
           <button className="box" id="GoodToKnow" onClick={() => toggleModal('GoodToKnow')} ref={el => elements.current[3] = el}><span><h3>GoodToKnow</h3></span></button>
-          <button className="box" id="PhoneWidgets" onClick={() => toggleModal('PhoneWidgets')} ref={el => elements.current[4] = el}><span><h3>Phone Widgets</h3></span></button>
         </div>
         <div className="wrapper">
-          <button className="box" id="DiscordBot" onClick={() => toggleModal('DiscordBot')} ref={el => elements.current[5] = el}><span><h3>DiscordBot</h3></span></button>
+        <button className="box" id="FPS" onClick={() => toggleModal('FPS')} ref={el => elements.current[2] = el}><span><h3>FPS</h3></span></button>
+          <button className="box" id="DiscordBot" onClick={() => toggleModal('DiscordBot')} ref={el => elements.current[4] = el}><span><h3>DiscordBot</h3></span></button>
         </div>
       </div>
       <div className={modalClassName}>
