@@ -48,7 +48,6 @@ h1 {
   padding-top: 5vh;
   padding-bottom: 5vh;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
@@ -162,7 +161,6 @@ p{
 .aboutMe{
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   padding-top: 35vh;
   padding-bottom: 35vh;
@@ -236,9 +234,7 @@ p{
 
 .wrapper{
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  align-items: center;
 }
 
 .wrapper button{
@@ -259,11 +255,11 @@ p{
 }
 
 .box h3 {
-  color: var(--font-color);
+  color: #e0e0e0;
   font-weight: 500;
   position: absolute;
   margin: 0;
-  text-shadow: 0.2rem 0.2rem 1px var(--text-shadow-color);
+  text-shadow: 0.2rem 0.2rem 1px #353535;
 }
 
 .animate {
@@ -327,60 +323,6 @@ p{
 
 .contact h1{
   padding-bottom: 0vh;
-}
-
-#emailInput{
-  background-color: var(--input-color);
-  color: var(--font-color);
-  width: 60%;
-  max-width: 1000px;
-  height: 5vh;
-  border-radius: 10px;
-  padding: 1vh;
-  font-size: 1.5rem;
-  border: none;
-  transition: ease-in-out 0.5s;
-  box-shadow: 15px 15px 1px 5px var(--box-shadow-color);
-}
-
-#emailInput:hover{
-  border-color: #2160D4;
-}
-
-#textInput{
-  background-color: var(--input-color);
-  color: var(--font-color);
-  width: 60%;
-  max-width: 1000px;
-  height: 20vh;
-  border-radius: 10px;
-  padding: 1vh;
-  border: none;
-  font-size: 1.5rem;
-  transition: ease-in-out 0.5s;
-  box-shadow: 15px 15px 1px 5px var(--box-shadow-color);
-}
-
-#textInput:hover{
-  border-color: #2160D4;
-}
-
-#submitBtn{
-  width: 40%;
-  max-width: 550px;
-  height: 5.5vh;
-  border-radius: 10px;
-  border: none;
-  margin: 2vh;
-  font-size: 1.5rem;
-  background-color: #548DDE;
-  transition: ease-in-out 0.5s;
-  cursor: pointer;
-  color: var(--font-color);
-}
-
-#submitBtn:hover{
-  background-color: #2160D4;
 }
 
 /*Footer*/
