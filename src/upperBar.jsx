@@ -4,10 +4,8 @@ import React, { useState } from "react";
 import './index.css';
 
 function upperBar() {
-    const [colorMode, setColorMode] = useState("light");
-    const [state, setState] = useState("light");
-    //change --font-color and --color-background of the page to dark or light respectively
-    if (state === "light") {
+    const [colorMode, setColorMode] = useState(localStorage.getItem("theme") || "dark");
+    if (colorMode === "dark") {
         document.documentElement.style.setProperty('--color-background', '#1F1F1F');
         document.documentElement.style.setProperty('--font-color', '#e0e0e0');
         document.documentElement.style.setProperty('--bar-color', '#161616');
@@ -34,9 +32,10 @@ function upperBar() {
                 </div>
                 <div className='barPart2'>
                     <button className="clickableIcon icon modeChange" onClick={() => {
-                        setColorMode(colorMode === "light" ? "dark" : "light");
-                        setState(colorMode === "light" ? "dark" : "light");
-                    }}><VscColorMode className='modeChangeIcon'/></button>
+                        const newMode = localStorage.getItem("theme") === "dark" ? "light" : "dark";
+                        localStorage.setItem("theme", newMode);
+                        setColorMode(newMode);
+                        }}><VscColorMode className='modeChangeIcon'/></button>
                     {/*<div className="dropdown">
                         <button className="dropbtn"><HiOutlineArrowDown/></button>
                         <div className="dropdown-content">

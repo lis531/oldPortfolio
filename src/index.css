@@ -221,7 +221,7 @@ p{
   justify-content: center;
   align-items: center;
   width: 40vw;
-  height: 25vh;
+  height: 30vh;
   border-radius: 25px;
   border: none;
   padding: 0;
@@ -547,7 +547,7 @@ svg{
     margin: 3vh;
   }
   .box{
-    width: 90%;
+    width: 96vw;
     height: 40vh;
   }
   #emailInput{
@@ -606,7 +606,7 @@ svg{
     margin: 2vw;
   }
   .box{
-    width: 90%;
+    width: 96vw;
     height: 20vh;
   }
   #emailInput{

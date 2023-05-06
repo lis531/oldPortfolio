@@ -6,31 +6,45 @@ import animations from './animations';
 const projectsInfo = {
   SnakeTHEgame: {
     header: 'Snake the game',
-    paragraph: 'A snake game with some enhancements made using C# in Unity. Release in 2023.',
+    paragraph: 'A snake game with some enhancements made using C# in Unity. Planned to relase in 2023. (not in development)',
     href: 'https://github.com/lis531/SnakeTHEgame',
     tryOut: '',
     tryOutStyle: { display: 'none' }
   },
   GoodToKnow: {
     header: 'GoodToKnow',
-    paragraph: 'An app made with HTML, CSS and JavaScript using OpenAI to give you some interesting information everyday. TBA.',
+    paragraph: 'An app made with HTML, CSS, TypeScript and react using OpenAI to give you some interesting information everyday. No relase date. (not in development)',
     href: 'https://github.com/lis531/GoodToKnow',
     tryOut: '',
     tryOutStyle: { display: 'none' }
   },
-  FPS: {
-    header: 'FPS',
-    paragraph: 'FPS game. App made with UE5. 2023.',
-    href: 'https://github.com/lis531/FPS',
+  Calendar: {
+    header: 'Calendar',
+    paragraph: 'Advanced calendar made using HTML, CSS, TypeScript and react. Planned to relase in 2023. (active development)',
+    href: 'https://github.com/lis531/Calendar',
     tryOut: '',
     tryOutStyle: { display: 'none' }
   },
   DiscordBot: {
     header: 'Discord Bot',
-    paragraph: 'A discord bot made using Python. 2023.',
+    paragraph: 'A discord bot made using Python. Planned to relase in 2023. (active development)',
     href: 'https://github.com/lis531/DiscordBot',
     tryOut: '',
     tryOutStyle: { display: 'none' }
+  },
+  MyDiary: {
+    header: 'MyDiary',
+    paragraph: 'MyDiary is a website made using HTML, CSS, TypeScript and react. Planned to relase in 2023. (not in development)',
+    href: 'https://github.com/lis531/MyDiary',
+    tryOut: '',
+    tryOutStyle: { display: 'none' }
+  },
+  TechNews: {
+    header: 'TechNews',
+    paragraph: 'TechNews is my first school project made using HTML, CSS and JavaScript. Planned to relase in 2023. (active development)',
+    href: 'https://github.com/lis531/TechNews',
+    tryOut: 'https://lis531.github.io/TechNews/',
+    tryOutStyle: { display: 'visible' }
   }
 };
 
@@ -73,12 +87,16 @@ const Projects = () => {
       <div className="Projects sitePart" id="projects">
         <h1 ref={el => elements.current[0] = el}><span className="anim">M</span><span className="anim">y</span><span className='space'></span><span className="anim">P</span><span className="anim">r</span><span className="anim">o</span><span className="anim">j</span><span className="anim">e</span><span className="anim">c</span><span className="anim">t</span><span className="anim">s</span></h1>
         <div className="wrapper">
-          <button className="box" id="SnakeTHEgame" onClick={() => toggleModal('SnakeTHEgame')} ref={el => elements.current[1] = el}><span><h3>Snake the game</h3></span></button>
-          <button className="box" id="GoodToKnow" onClick={() => toggleModal('GoodToKnow')} ref={el => elements.current[3] = el}><span><h3>GoodToKnow</h3></span></button>
+          <button className="box" id="TechNews" onClick={() => toggleModal('TechNews')} ref={el => elements.current[1] = el}><span><h3>TechNews</h3></span></button>
+          <button className="box" id="Calendar" onClick={() => toggleModal('Calendar')} ref={el => elements.current[2] = el}><span><h3>Calendar</h3></span></button>
         </div>
         <div className="wrapper">
-        <button className="box" id="FPS" onClick={() => toggleModal('FPS')} ref={el => elements.current[2] = el}><span><h3>FPS</h3></span></button>
-          <button className="box" id="DiscordBot" onClick={() => toggleModal('DiscordBot')} ref={el => elements.current[4] = el}><span><h3>DiscordBot</h3></span></button>
+          <button className="box" id="DiscordBot" onClick={() => toggleModal('DiscordBot')} ref={el => elements.current[3] = el}><span><h3>DiscordBot</h3></span></button>
+          <button className="box" id="MyDiary" onClick={() => toggleModal('MyDiary')} ref={el => elements.current[4] = el}><span><h3>MyDiary</h3></span></button>
+        </div>
+        <div className="wrapper">
+          <button className="box" id="SnakeTHEgame" onClick={() => toggleModal('SnakeTHEgame')} ref={el => elements.current[5] = el}><span><h3>SnakeTHEgame</h3></span></button>
+          <button className="box" id="GoodToKnow" onClick={() => toggleModal('GoodToKnow')} ref={el => elements.current[6] = el}><span><h3>GoodToKnow</h3></span></button>
         </div>
       </div>
       <div className={modalClassName}>
