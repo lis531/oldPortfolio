@@ -45,6 +45,13 @@ const projectsInfo = {
     href: 'https://github.com/lis531/TechNews',
     tryOut: 'https://lis531.github.io/TechNews/',
     tryOutStyle: { display: 'visible' }
+  },
+  SchoolProjects: {
+    header: 'SchoolProjects',
+    paragraph: 'SchoolProjects is website for hosting my other (smaller) school projects made using HTML, CSS and JavaScript. (active development)',
+    href: 'https://github.com/lis531/SchoolProjects/',
+    tryOut: 'https://lis531.github.io/SchoolProjects/',
+    tryOutStyle: { display: 'visible' }
   }
 };
 
@@ -97,6 +104,9 @@ const Projects = () => {
         <div className="wrapper">
           <button className="box" id="SnakeTHEgame" onClick={() => toggleModal('SnakeTHEgame')} ref={el => elements.current[5] = el}><span><h3>SnakeTHEgame</h3></span></button>
           <button className="box" id="GoodToKnow" onClick={() => toggleModal('GoodToKnow')} ref={el => elements.current[6] = el}><span><h3>GoodToKnow</h3></span></button>
+        </div>
+        <div className="wrapper">
+          <button className="box" id="SchoolProjects" onClick={() => toggleModal('SchoolProjects')} ref={el => elements.current[7] = el}><span><h3>SchoolProjects</h3></span></button>
         </div>
       </div>
       <div className={modalClassName}>
