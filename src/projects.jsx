@@ -42,8 +42,8 @@ const projectsInfo = {
   SchoolProjects: {
     header: 'SchoolProjects',
     paragraph: 'SchoolProjects is website for hosting my other (smaller) school projects made using HTML, CSS and JavaScript. (active development)',
-    href: 'https://github.com/lis531/SchoolProjects/',
-    tryOut: 'https://lis531.github.io/SchoolProjects/',
+    href: 'https://github.com/lis531/schoolProjects/',
+    tryOut: 'https://lis531.github.io/schoolProjects/',
     tryOutStyle: { display: 'visible' }
   }
 };
