@@ -18,13 +18,6 @@ const projectsInfo = {
     tryOut: '',
     tryOutStyle: { display: 'none' }
   },
-  Calendar: {
-    header: 'Calendar',
-    paragraph: 'Advanced calendar made using HTML, CSS, TypeScript and react. Planned to relase in 2023. (active development)',
-    href: 'https://github.com/lis531/Calendar',
-    tryOut: '',
-    tryOutStyle: { display: 'none' }
-  },
   DiscordBot: {
     header: 'Discord Bot',
     paragraph: 'A discord bot made using Python. Planned to relase in 2023. (active development)',
@@ -95,7 +88,7 @@ const Projects = () => {
         <h1 ref={el => elements.current[0] = el}><span className="anim">M</span><span className="anim">y</span><span className='space'></span><span className="anim">P</span><span className="anim">r</span><span className="anim">o</span><span className="anim">j</span><span className="anim">e</span><span className="anim">c</span><span className="anim">t</span><span className="anim">s</span></h1>
         <div className="wrapper">
           <button className="box" id="TechNews" onClick={() => toggleModal('TechNews')} ref={el => elements.current[1] = el}><span><h3>TechNews</h3></span></button>
-          <button className="box" id="Calendar" onClick={() => toggleModal('Calendar')} ref={el => elements.current[2] = el}><span><h3>Calendar</h3></span></button>
+          <button className="box" id="SchoolProjects" onClick={() => toggleModal('SchoolProjects')} ref={el => elements.current[2] = el}><span><h3>SchoolProjects</h3></span></button>
         </div>
         <div className="wrapper">
           <button className="box" id="DiscordBot" onClick={() => toggleModal('DiscordBot')} ref={el => elements.current[3] = el}><span><h3>DiscordBot</h3></span></button>
@@ -104,9 +97,6 @@ const Projects = () => {
         <div className="wrapper">
           <button className="box" id="SnakeTHEgame" onClick={() => toggleModal('SnakeTHEgame')} ref={el => elements.current[5] = el}><span><h3>SnakeTHEgame</h3></span></button>
           <button className="box" id="GoodToKnow" onClick={() => toggleModal('GoodToKnow')} ref={el => elements.current[6] = el}><span><h3>GoodToKnow</h3></span></button>
-        </div>
-        <div className="wrapper">
-          <button className="box" id="SchoolProjects" onClick={() => toggleModal('SchoolProjects')} ref={el => elements.current[7] = el}><span><h3>SchoolProjects</h3></span></button>
         </div>
       </div>
       <div className={modalClassName}>
