@@ -85,11 +85,10 @@ const Projects = () => {
         </div>
         <div className="wrapper">
           <button className="box" id="DiscordBot" onClick={() => toggleModal('DiscordBot')} ref={el => elements.current[3] = el}><span><h3>DiscordBot</h3></span></button>
-          <button className="box" id="MyDiary" onClick={() => toggleModal('MyDiary')} ref={el => elements.current[4] = el}><span><h3>MyDiary</h3></span></button>
+          <button className="box" id="SnakeTHEgame" onClick={() => toggleModal('SnakeTHEgame')} ref={el => elements.current[4] = el}><span><h3>SnakeTHEgame</h3></span></button>
         </div>
         <div className="wrapper">
-          <button className="box" id="SnakeTHEgame" onClick={() => toggleModal('SnakeTHEgame')} ref={el => elements.current[5] = el}><span><h3>SnakeTHEgame</h3></span></button>
-          <button className="box" id="GoodToKnow" onClick={() => toggleModal('GoodToKnow')} ref={el => elements.current[6] = el}><span><h3>GoodToKnow</h3></span></button>
+          <button className="box" id="Borufi" onClick={() => toggleModal('Borufi')} ref={el => elements.current[5] = el}><span><h3>Borufi</h3></span></button>
         </div>
       </div>
       <div className={modalClassName}>
