@@ -20,10 +20,7 @@ function WorkWith() {
                 <button className='iconButton icon' ref={el => elements.current[5] = el}><SiReact /></button>
                 <button className='iconButton icon' ref={el => elements.current[6] = el}><SiCsharp /></button>
                 <button className='iconButton icon' ref={el => elements.current[7] = el}><SiCplusplus /></button>
-                <button className='iconButton icon' ref={el => elements.current[8] = el}><SiPython /></button>
-                <button className='iconButton icon' ref={el => elements.current[9] = el}><TbBrandKotlin /></button>
                 <button className='iconButton icon' ref={el => elements.current[10] = el}><BsUnity /></button>
-                <button className='iconButton icon' ref={el => elements.current[11] = el}><SiUnrealengine /></button>
                 <button className='iconButton icon' ref={el => elements.current[12] = el}><AiFillGithub /></button>
                 <button className='iconButton icon' ref={el => elements.current[13] = el}><SiAdobephotoshop /></button>
                 <button className='iconButton icon' ref={el => elements.current[14] = el}><SiAdobepremierepro /></button>

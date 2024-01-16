@@ -11,24 +11,10 @@ const projectsInfo = {
     tryOut: '',
     tryOutStyle: { display: 'none' }
   },
-  GoodToKnow: {
-    header: 'GoodToKnow',
-    paragraph: 'An app made with HTML, CSS, TypeScript and react using OpenAI to give you some interesting information everyday. No relase date. (not in development)',
-    href: 'https://github.com/lis531/GoodToKnow',
-    tryOut: '',
-    tryOutStyle: { display: 'none' }
-  },
   DiscordBot: {
     header: 'Discord Bot',
     paragraph: 'A discord bot made using Python. Planned to relase in 2023. (active development)',
     href: 'https://github.com/lis531/DiscordBot',
-    tryOut: '',
-    tryOutStyle: { display: 'none' }
-  },
-  MyDiary: {
-    header: 'MyDiary',
-    paragraph: 'MyDiary is a website made using HTML, CSS, TypeScript and react. Planned to relase in 2023. (not in development)',
-    href: 'https://github.com/lis531/MyDiary',
     tryOut: '',
     tryOutStyle: { display: 'none' }
   },
