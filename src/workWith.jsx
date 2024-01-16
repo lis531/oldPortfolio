@@ -1,7 +1,6 @@
 import { SiCsharp, SiCplusplus, SiCsswizardry, SiAdobephotoshop, SiAdobepremierepro, SiUnrealengine, SiReact, SiPython, SiTypescript, SiJavascript } from 'react-icons/si'
 import { AiFillHtml5, AiFillGithub } from 'react-icons/ai'
 import { BsUnity } from 'react-icons/bs'
-import { TbBrandKotlin } from 'react-icons/tb'
 import React, { useRef } from 'react';
 import animations from './animations';
 
