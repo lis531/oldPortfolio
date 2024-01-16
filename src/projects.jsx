@@ -13,21 +13,28 @@ const projectsInfo = {
   },
   DiscordBot: {
     header: 'Discord Bot',
-    paragraph: 'A discord bot made using Python. Planned to relase in 2023. (active development)',
+    paragraph: 'A discord bot made using Python. Planned to relase in 2023. (moderate development)',
     href: 'https://github.com/lis531/DiscordBot',
     tryOut: '',
     tryOutStyle: { display: 'none' }
   },
+  Borufi: {
+    header: 'Borufi',
+    paragraph: 'A music library (AKA Spotify). Planned to fully relase before end of January 2023. (in development)',
+    href: 'https://github.com/lis531/borufi',
+    tryOut: 'https://borufi.netlify.app/',
+    tryOutStyle: { display: 'visible' }
+  },
   TechNews: {
     header: 'TechNews',
-    paragraph: 'TechNews is my first school project made using HTML, CSS and JavaScript. Planned to relase in 2023. (active development)',
+    paragraph: 'TechNews is my first school project made using HTML, CSS and JavaScript. Relased. (moderate support)',
     href: 'https://github.com/lis531/TechNews',
     tryOut: 'https://lis531.github.io/TechNews/',
     tryOutStyle: { display: 'visible' }
   },
   SchoolProjects: {
     header: 'SchoolProjects',
-    paragraph: 'SchoolProjects is website for hosting my other (smaller) school projects made using HTML, CSS and JavaScript. (active development)',
+    paragraph: 'SchoolProjects is website for hosting my other (smaller) school projects made using HTML, CSS and JavaScript. (moderate support)',
     href: 'https://github.com/lis531/schoolProjects/',
     tryOut: 'https://lis531.github.io/schoolProjects/',
     tryOutStyle: { display: 'visible' }
