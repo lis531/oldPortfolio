@@ -1,0 +1,23 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--font-color);
+    font-size: 1.5rem;
+    width: 100%;
+    margin-bottom: 2vh;
+    transition: ease-in-out 500ms;
+}
+
+@media screen and (max-width: 800px) {
+    .footer {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-height: 850px) {
+    .footer {
+        font-size: 1rem;
+    }
+}

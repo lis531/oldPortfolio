@@ -1,9 +1,8 @@
 import { VscColorMode } from 'react-icons/vsc';
-import { HiOutlineArrowDown } from 'react-icons/hi';
 import React, { useState } from "react";
-import './index.css';
+import './navBar.css';
 
-function upperBar() {
+function NavBar() {
     const [colorMode, setColorMode] = useState(localStorage.getItem("theme") || "dark");
     if (colorMode === "dark") {
         document.documentElement.style.setProperty('--color-background', '#1F1F1F');
@@ -35,18 +34,11 @@ function upperBar() {
                         const newMode = localStorage.getItem("theme") === "dark" ? "light" : "dark";
                         localStorage.setItem("theme", newMode);
                         setColorMode(newMode);
-                        }}><VscColorMode className='modeChangeIcon'/></button>
-                    {/*<div className="dropdown">
-                        <button className="dropbtn"><HiOutlineArrowDown/></button>
-                        <div className="dropdown-content">
-                            <a href="#">Link</a>
-                            <a href="#">Link</a>
-                            <a href="#">Link</a>
-                        </div>
-                    </div>*/}
+                        }}><VscColorMode className='modeChangeIcon'/>
+                    </button>
                 </div>
             </div>
         </>
     )
 }
-export default upperBar
+export default NavBar

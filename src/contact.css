@@ -1,0 +1,31 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    width: 100%;
+    color: var(--font-color);
+    gap: 3.5vh;
+    margin-bottom: 10vh;
+}
+
+.contact h1 {
+    padding-bottom: 0vh;
+}
+
+.clickableIcon svg {
+    padding: 0.7rem;
+}
+
+.discordIcon:hover {
+    background-color: #7289DA;
+}
+
+.mailIcon:hover {
+    background-color: #E67E22;
+}
+
+.githubIcon:hover {
+    background-color: #333;
+}

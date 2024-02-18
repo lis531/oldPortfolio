@@ -1,5 +1,6 @@
 import { useRef, useEffect } from 'react';
 import animations from './animations';
+import './aboutMe.css';
 
 function AboutMe() {
   const elements = useRef([]);

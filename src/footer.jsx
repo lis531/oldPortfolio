@@ -1,3 +1,5 @@
+import './footer.css';
+
 function Footer() {
     let time = new Date().getFullYear();
     return (

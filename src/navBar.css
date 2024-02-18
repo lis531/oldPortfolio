@@ -1,0 +1,77 @@
+.bar {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    background-color: var(--bar-color);
+    filter: drop-shadow(0 5px 0.5rem var(--box-shadow-color));
+    text-align: center;
+    height: clamp(80px, 10vh, 25vh);
+    font-size: 2.7rem;
+    z-index: 90;
+    transition: ease-in-out 500ms;
+}
+
+.hover-animation {
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
+}
+
+.hover-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    border-radius: 10px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.barPart1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 10vw;
+    margin-left: 8vw;
+    font-weight: lighter;
+}
+
+.barPart2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 4vw;
+    gap: 2vw;
+}
+
+.barPart2 button{
+    height: 4rem;
+    width: 4rem;
+}
+
+@media screen and (max-width: 800px){
+    .barPart1{
+        font-size: 2rem;
+        gap: 3vw;
+        margin-left: 4vw;
+    }
+    .barPart2 button{
+      height: 2.5rem;
+      width: 2.5rem;
+      margin-right: 2vw;
+    }
+    .modeChange{
+        padding: 0 !important;
+    }
+}

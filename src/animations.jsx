@@ -22,18 +22,17 @@ const animations = (refs, options = {}) => {
     const elements = document.querySelectorAll('.' + className);
 
     elements.forEach((element) => {
-        element.addEventListener("mouseenter", function() {
-            element.classList.add("play-animation");
-        });
-    
-        element.addEventListener("mouseleave", function() {
-            setTimeout(() => {
-            element.classList.remove("play-animation");
-            }, 600);
-        });
+      element.addEventListener("mouseenter", function () {
+        element.classList.add("play-animation");
+      });
+
+      element.addEventListener("mouseleave", function () {
+        setTimeout(() => {
+          element.classList.remove("play-animation");
+        }, 600);
+      });
     });
   };
-  
   return addHoverAnimation;
 };
 

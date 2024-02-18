@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { AiFillGithub } from 'react-icons/ai';
 import { TbBrandGooglePlay } from 'react-icons/tb';
 import animations from './animations';
+import './projects.css';
 
 const projectsInfo = {
   SnakeTHEgame: {
@@ -20,7 +21,7 @@ const projectsInfo = {
   },
   Borufi: {
     header: 'Borufi',
-    paragraph: 'A music library (AKA Spotify). Planned to fully relase before end of January 2023. (in development)',
+    paragraph: 'A music library (AKA Spotify). Planned to fully relase before end of January 2023. (moderate support)',
     href: 'https://github.com/lis531/borufi',
     tryOut: 'https://borufi.netlify.app/',
     tryOutStyle: { display: 'visible' }
