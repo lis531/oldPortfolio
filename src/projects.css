@@ -77,27 +77,27 @@
 }
 
 #SnakeTHEgame {
-    background-image: url(snake.png);
+    background-image: url(../snake.png);
     background-position: center center;
 }
 
 #DiscordBot {
-    background-image: url(discord.png);
+    background-image: url(../discord.png);
     background-position: center center;
 }
 
 #Borufi {
-    background-image: url(borufi.png);
+    background-image: url(../borufi.png);
     background-position: center center;
 }
 
 #SchoolProjects {
-    background-image: url(schoolProjectBg.png);
+    background-image: url(../schoolProjectBg.png);
     background-position: center center;
 }
 
 #TechNews {
-    background-image: url(techNewsBg.png);
+    background-image: url(../techNewsBg.png);
     background-position: center center;
 }
 
