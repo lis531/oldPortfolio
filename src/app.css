@@ -5,13 +5,18 @@
   font-weight: 400;
   color-scheme: light dark;
   background-color: var(--color-background);
-  transition: ease-in-out 500ms;
+  transition: background-color ease-in-out .5s;
   scroll-behavior: smooth;
+  --color-background: #1F1F1F;
+  --font-color: #e0e0e0;
+  --bar-color: #161616;
+  --box-shadow-color: #161616;
+  --text-shadow-color: #353535;
+  --additional-color: #cfcfcf;
 }
 
 a {
-  text-decoration: inherit;
-  transition: ease-in-out 0.5s;
+  text-decoration: inherit;  
 }
 
 a:hover {
@@ -49,7 +54,7 @@ h1 {
 p {
   font-size: 2rem;
   color: var(--font-color);
-  transition: ease-in-out 500ms;
+  transition: color ease-in-out .5s;
 }
 
 /*Icons*/
@@ -69,7 +74,7 @@ svg {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: ease-in-out 0.5s;
+  transition: color ease-in-out .5s, background-color ease-in-out .5s;
   border: none;
   color: var(--font-color);
 }
@@ -119,11 +124,6 @@ svg {
 
 .contact div {
   gap: 8vw;
-}
-
-
-.modeChangeIcon {
-  padding: 0.3rem !important;
 }
 
 .clickableIcon:hover {

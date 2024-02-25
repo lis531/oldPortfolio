@@ -3,6 +3,7 @@ import { BsDiscord } from 'react-icons/bs';
 import { AiFillGithub } from 'react-icons/ai';
 import { useRef, useEffect } from 'react';
 import animations from './animations';
+import './contact.css';
 
 function Contact() {
     const elements = useRef([]);

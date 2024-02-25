@@ -11,7 +11,7 @@
     padding: 0;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: ease-in-out 0.5s;
+    transition: box-shadow ease-in-out .5s;
     z-index: 1;
     box-shadow: inset 0 0 0 1200px rgba(0, 0, 0, 0.2);
 }
@@ -35,7 +35,6 @@
     border-radius: 25px;
     box-shadow: 1.5vw 1.5vh 1rem 0.5rem var(--box-shadow-color);
     cursor: pointer;
-    transition: ease-in-out 0.5s;
 }
 
 .box h3 {
@@ -113,7 +112,7 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    transition: all 0.6s ease-in-out;
+    transition: background-color .5s ease-in-out;
     z-index: 100;
 }
 
@@ -123,7 +122,7 @@
     max-width: fit-content;
     max-height: fit-content;
     width: 80vw;
-    background-color: var(--input-color);
+    background-color: var(--box-shadow-color);
     color: var(--font-color);
     border-radius: 30px;
     display: flex;
@@ -161,7 +160,7 @@
     font-size: 2rem;
     cursor: pointer;
     color: var(--font-color);
-    transition: all 0.5s ease-in-out;
+    transition: color .5s ease-in-out;
     background-color: rgba(0, 0, 0, 0);
 }
 

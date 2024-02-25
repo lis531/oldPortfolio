@@ -19,13 +19,13 @@
 }
 
 .discordIcon:hover {
-    background-color: #7289DA;
+    background-color: #7289DA !important;
 }
 
 .mailIcon:hover {
-    background-color: #E67E22;
+    background-color: #e62f22 !important;
 }
 
 .githubIcon:hover {
-    background-color: #333;
+    background-color: #333 !important;
 }

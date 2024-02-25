@@ -3,12 +3,12 @@
     display: flex;
     width: 100%;
     background-color: var(--bar-color);
-    filter: drop-shadow(0 5px 0.5rem var(--box-shadow-color));
+    box-shadow: 0 5px 0.5rem var(--box-shadow-color);
     text-align: center;
     height: clamp(80px, 10vh, 25vh);
     font-size: 2.7rem;
     z-index: 90;
-    transition: ease-in-out 500ms;
+    transition: background-color ease-in-out .5s, box-shadow ease-in-out .5s;
 }
 
 .hover-animation {
@@ -28,7 +28,7 @@
     left: 0;
     background-color: #0087ca;
     transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
+    transition: transform .3s ease-out;
 }
 
 .hover-animation:hover::after {
@@ -55,9 +55,75 @@
     gap: 2vw;
 }
 
-.barPart2 button{
-    height: 4rem;
-    width: 4rem;
+.modeChange{
+    padding: 0 !important;
+    overflow: hidden;
+    position: relative;
+    background-color: transparent;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-background);
+    transition: background-color ease-in-out .5s;
+    border-radius: 100px;
+    height: 3.5rem;
+    z-index: 0;
+}
+
+.modeChangeIcon{
+    border: none;
+    background-color: transparent;
+    padding: 0.6rem !important;
+    border-radius: 100px;
+    cursor: pointer;
+    height: -webkit-fill-available;
+    aspect-ratio: 1/1;
+    z-index: 100;
+}
+
+.modeChangeIcon > svg {
+    stroke: var(--font-color);
+    transition: stroke ease-in-out .5s;
+}
+
+.modeChange::before{
+    content: '';
+    position: absolute;
+    font-size: 2.5rem;
+    border-radius: 100px;
+    background-color: var(--additional-color);
+    transition: background-color ease-in-out .5s;
+    z-index: -100;
+}
+
+.modeChange:has(.sun > .activeMode)::before{
+    width: 3.5rem;
+    height: 3.5rem;
+    animation: rightToLeft 0.5s both;
+}
+
+@keyframes leftToRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.modeChange:has(.moon > .activeMode)::before{
+    width: 3.5rem;
+    height: 3.5rem;
+    animation: leftToRight 0.5s both;
+}
+
+@keyframes rightToLeft {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 @media screen and (max-width: 800px){
@@ -69,9 +135,5 @@
     .barPart2 button{
       height: 2.5rem;
       width: 2.5rem;
-      margin-right: 2vw;
-    }
-    .modeChange{
-        padding: 0 !important;
     }
 }
