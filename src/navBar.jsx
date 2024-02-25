@@ -1,8 +1,11 @@
 import { FiSun, FiMoon } from "react-icons/fi";
-import React, { useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import './navBar.css';
 
 function NavBar() {
+    const sunRef = useRef(null);
+    const moonRef = useRef(null);
+
     const [colorMode, setColorMode] = useState(localStorage.getItem("theme") || "dark");
     if (colorMode === "dark") {
         document.documentElement.style.setProperty('--color-background', '#1F1F1F');
@@ -20,6 +23,44 @@ function NavBar() {
         document.documentElement.style.setProperty('--text-shadow-color', '#bababa');
         document.documentElement.style.setProperty('--additional-color', '#cfcfcf');
     }
+    
+    useEffect(() => {
+        const sunButton = sunRef.current;
+        const moonButton = moonRef.current;
+
+        const theme = localStorage.getItem("theme");
+        if (theme) {
+            setColorMode(theme);
+            const modeChange = document.getElementsByClassName("modeChange")[0];
+            if (theme === "light") {
+                modeChange.classList.add('activeModeLeft');
+            } else {
+                modeChange.classList.add('activeModeRight');
+            }
+        }
+
+        const changeToLightMode = () => {
+            localStorage.setItem("theme", "light");
+            setColorMode("light");
+            sunButton.firstElementChild.classList.add('activeMode');
+            moonButton.firstElementChild.classList.remove('activeMode');
+        };
+
+        const changeToDarkMode = () => {
+            localStorage.setItem("theme", "dark");
+            setColorMode("dark");
+            moonButton.firstElementChild.classList.add('activeMode');
+            sunButton.firstElementChild.classList.remove('activeMode');
+        };
+
+        sunButton.addEventListener('click', changeToLightMode);
+        moonButton.addEventListener('click', changeToDarkMode);
+
+        return () => {
+            sunButton.removeEventListener('click', changeToLightMode);
+            moonButton.removeEventListener('click', changeToDarkMode);
+        };
+    }, []);
 
     return(
         <>
@@ -31,22 +72,11 @@ function NavBar() {
                 </div>
                 <div className='barPart2'>
                     <div className="modeChange">
-                        <button className='modeChangeIcon sun' onClick={() => {
-                            localStorage.setItem("theme", "light");
-                            setColorMode("light");
-                            document.getElementsByClassName("sun")[0].firstElementChild.classList.add('activeMode');
-                            document.getElementsByClassName("moon")[0].firstElementChild.classList.remove('activeMode');
-                            }}>
-                            <FiSun/>
+                        <button className='modeChangeIcon sun' ref={sunRef}>
+                            <FiSun />
                         </button>
-                        <button className='modeChangeIcon moon' onClick={() => {
-                            localStorage.setItem("theme", "dark");
-                            setColorMode("dark");
-                            document.getElementsByClassName("moon")[0].firstElementChild.classList.add('activeMode');
-                            document.getElementsByClassName("sun")[0].firstElementChild.classList.remove('activeMode');
-
-                            }}>
-                            <FiMoon/>
+                        <button className='modeChangeIcon moon' ref={moonRef}>
+                            <FiMoon />
                         </button>
                     </div>
                 </div>

@@ -43,6 +43,8 @@
     position: absolute;
     margin: 0;
     text-shadow: 0.2rem 0.2rem 1px #353535;
+    word-wrap: break-word;
+    max-width: 100%;
 }
 
 .animate {
@@ -165,7 +167,7 @@
 }
 
 .modal-content button:hover {
-    background-color: #353535;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .modal-par {

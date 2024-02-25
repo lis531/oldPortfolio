@@ -89,7 +89,8 @@
 .modeChange::before{
     content: '';
     position: absolute;
-    font-size: 2.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 100px;
     background-color: var(--additional-color);
     transition: background-color ease-in-out .5s;
@@ -97,8 +98,6 @@
 }
 
 .modeChange:has(.sun > .activeMode)::before{
-    width: 3.5rem;
-    height: 3.5rem;
     animation: rightToLeft 0.5s both;
 }
 
@@ -112,9 +111,15 @@
 }
 
 .modeChange:has(.moon > .activeMode)::before{
-    width: 3.5rem;
-    height: 3.5rem;
     animation: leftToRight 0.5s both;
+}
+
+.activeModeLeft::before{
+    transform: translateX(0);
+}
+
+.activeModeRight::before{
+    transform: translateX(100%);
 }
 
 @keyframes rightToLeft {
@@ -135,5 +140,12 @@
     .barPart2 button{
       height: 2.5rem;
       width: 2.5rem;
+    }
+    .modeChange{
+        height: 2.5rem;
+    }
+    .modeChange::before{
+        width: 2.5rem;
+        height: 2.5rem;
     }
 }
