@@ -1,50 +1,49 @@
+.sitePart {
+    padding-top: 10vh;
+    padding-bottom: 25vh;
+}
+
+.sitePart > button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: inherit;
+}
+
 .box {
-    font-size: 3.2em;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 40vw;
-    height: 30vh;
-    border-radius: 25px;
+    position: relative;
+    width: 96vw;;
+    height: 60dvh;
     border: none;
     padding: 0;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: box-shadow ease-in-out .5s;
-    z-index: 1;
-    box-shadow: inset 0 0 0 1200px rgba(0, 0, 0, 0.2);
-}
-
-.wrapper {
-    display: flex;
-    justify-content: center;
-}
-
-.wrapper button {
-    margin: 4vh;
-}
-
-.box span {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    box-shadow: 1.5vw 1.5vh 1rem 0.5rem var(--box-shadow-color);
+    background-position: center;
     cursor: pointer;
+    background: none;
+    overflow: hidden;
 }
 
-.box h3 {
-    color: #e0e0e0;
-    font-weight: 500;
+.box > h3 {
+    font-size: 5rem;
+    z-index: 1;
+}
+
+.box > img {
+    width: -webkit-fill-available;
+    margin: -5px -10px -10px -5px;
     position: absolute;
-    margin: 0;
-    text-shadow: 0.2rem 0.2rem 1px #353535;
-    word-wrap: break-word;
-    max-width: 100%;
+    transition: all ease-in-out .3s;
+    filter: blur(10px) brightness(0.5);
+    object-fit: cover;
+    object-position: center;
+}
+
+.box:hover > img {
+    filter: blur(10px) brightness(0.8);
 }
 
 .animate {
@@ -62,46 +61,6 @@
         transform: translateY(0);
     }
 }
-
-.box:hover {
-    box-shadow: inset 0 0 0 1200px rgba(0, 0, 0, 0.6);
-}
-
-.box span {
-    -webkit-backdrop-filter: blur(3px);
-    backdrop-filter: blur(3px);
-}
-
-.box span:hover {
-    -webkit-backdrop-filter: blur(1px);
-    backdrop-filter: blur(1px);
-}
-
-#SnakeTHEgame {
-    background-image: url(../snake.png);
-    background-position: center center;
-}
-
-#DiscordBot {
-    background-image: url(../discord.png);
-    background-position: center center;
-}
-
-#Borufi {
-    background-image: url(../borufi.png);
-    background-position: center center;
-}
-
-#SchoolProjects {
-    background-image: url(../schoolProjectBg.png);
-    background-position: center center;
-}
-
-#TechNews {
-    background-image: url(../techNewsBg.png);
-    background-position: center center;
-}
-
 
 .modal {
     position: fixed;
@@ -193,37 +152,17 @@
 }
 
 @media screen and (max-width: 800px) {
-    .box span {
-        font-size: clamp(2rem, 7vw, 7vw);
-    }
-
     .modal-content {
         gap: 3vh;
     }
 
-    .wrapper {
-        flex-direction: column;
-    }
-
-    .wrapper button {
-        margin: 2vw;
-    }
-
     .box {
-        width: 96vw;
         height: 20vh;
     }
 }
 
 @media screen and (max-height: 850px) {
     .box {
-        width: 96vw;
         height: 40vh;
     }
-    .wrapper{
-        flex-direction: column;
-      }
-      .wrapper button{
-        margin: 3vh;
-      }
 }

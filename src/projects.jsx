@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { AiFillGithub } from 'react-icons/ai';
 import { TbBrandGooglePlay } from 'react-icons/tb';
+import { Parallax } from 'react-parallax';
 import animations from './animations';
 import './projects.css';
 
@@ -78,19 +79,28 @@ const Projects = () => {
 
   return (
     <>
-      <div className="Projects sitePart" id="projects">
+      <div className="sitePart" id="projects">
         <h1 ref={el => elements.current[0] = el}><span className="anim">M</span><span className="anim">y</span><span className='space'></span><span className="anim">P</span><span className="anim">r</span><span className="anim">o</span><span className="anim">j</span><span className="anim">e</span><span className="anim">c</span><span className="anim">t</span><span className="anim">s</span></h1>
-        <div className="wrapper">
-          <button className="box" id="TechNews" onClick={() => toggleModal('TechNews')} ref={el => elements.current[1] = el}><span><h3>TechNews</h3></span></button>
-          <button className="box" id="SchoolProjects" onClick={() => toggleModal('SchoolProjects')} ref={el => elements.current[2] = el}><span><h3>SchoolProjects</h3></span></button>
-        </div>
-        <div className="wrapper">
-          <button className="box" id="DiscordBot" onClick={() => toggleModal('DiscordBot')} ref={el => elements.current[3] = el}><span><h3>DiscordBot</h3></span></button>
-          <button className="box" id="SnakeTHEgame" onClick={() => toggleModal('SnakeTHEgame')} ref={el => elements.current[4] = el}><span><h3>SnakeTHEgame</h3></span></button>
-        </div>
-        <div className="wrapper">
-          <button className="box" id="Borufi" onClick={() => toggleModal('Borufi')} ref={el => elements.current[5] = el}><span><h3>Borufi</h3></span></button>
-        </div>
+        <button onClick={() => toggleModal('Borufi')} className="box" ref={el => elements.current[1] = el}>
+          <img src='../borufi.png'></img>
+          <h3>Borufi</h3>
+        </button>
+        <button onClick={() => toggleModal('SchoolProjects')} className="box" ref={el => elements.current[2] = el}>
+          <img src='../schoolProjectBg.png'></img>
+          <h3>SchoolProjects</h3>
+        </button>
+        <button onClick={() => toggleModal('TechNews')} className="box" ref={el => elements.current[3] = el}>
+          <img src='../techNewsBg.png'></img>
+          <h3>TechNews</h3>
+        </button>
+        <button onClick={() => toggleModal('DiscordBot')} className="box" ref={el => elements.current[4] = el}>
+          <img src='../discord.png'></img>
+          <h3>Discord</h3>
+        </button>
+        <button onClick={() => toggleModal('SnakeTHEgame')} className="box" ref={el => elements.current[5] = el}>
+          <img src='../snake.png'></img>
+          <h3>SnakeTHEgame</h3>
+        </button>
       </div>
       <div className={modalClassName}>
         {modalVisible && (

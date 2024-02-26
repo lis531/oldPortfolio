@@ -64,11 +64,6 @@ svg {
   height: 100%;
 }
 
-.sitePart {
-  padding-top: 10vh;
-  padding-bottom: 25vh;
-}
-
 .icon {
   cursor: pointer;
   display: flex;
