@@ -1,6 +1,8 @@
 .sitePart {
-    padding-top: 10vh;
     padding-bottom: 25vh;
+    overflow: hidden;
+    height: 90vh;
+    width: -webkit-fill-available;
 }
 
 .sitePart > button {
@@ -11,20 +13,16 @@
 }
 
 .box {
+    overflow-y: auto;
     display: flex;
     justify-content: center;
-    align-items: center;
     position: relative;
-    width: 96vw;;
-    height: 60dvh;
-    border: none;
-    padding: 0;
-    background-repeat: no-repeat;
-    background-size: cover;
+    align-items: center;
     background-position: center;
     cursor: pointer;
     background: none;
-    overflow: hidden;
+    width: inherit;
+    height: 100vh;
 }
 
 .box > h3 {
@@ -33,8 +31,8 @@
 }
 
 .box > img {
-    width: -webkit-fill-available;
-    margin: -5px -10px -10px -5px;
+    width: inherit;
+    height: inherit;
     position: absolute;
     transition: all ease-in-out .3s;
     filter: blur(10px) brightness(0.5);

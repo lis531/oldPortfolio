@@ -76,27 +76,41 @@ const Projects = () => {
 
   const modalClassName = `modal ${modalVisible ? '' : 'hidden'}`;
 
+  const backgroundRef = useRef(null);
+  useEffect(() => {
+    const background = backgroundRef.current;
+
+    document.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      if(scrollY !== 0) {
+        background.style.backgroundPosition = `0px ${scrollY / 2}px`;
+      } else {
+        background.style.backgroundPosition = `0px 0px`;
+      }
+    });
+  });
+
   return (
     <>
-      <div className="sitePart" id="projects">
-        <h1 ref={el => elements.current[0] = el}><span className="anim">M</span><span className="anim">y</span><span className='space'></span><span className="anim">P</span><span className="anim">r</span><span className="anim">o</span><span className="anim">j</span><span className="anim">e</span><span className="anim">c</span><span className="anim">t</span><span className="anim">s</span></h1>
-        <button onClick={() => toggleModal('Borufi')} className="box" ref={el => elements.current[1] = el}>
+      <h1 ref={el => elements.current[0] = el}><span className="anim">M</span><span className="anim">y</span><span className='space'></span><span className="anim">P</span><span className="anim">r</span><span className="anim">o</span><span className="anim">j</span><span className="anim">e</span><span className="anim">c</span><span className="anim">t</span><span className="anim">s</span></h1>
+      <div className="sitePart" id="projects" ref={backgroundRef}>
+        <button onClick={() => toggleModal('Borufi')} className="box">
           <img src='../borufi.png'></img>
           <h3>Borufi</h3>
         </button>
-        <button onClick={() => toggleModal('SchoolProjects')} className="box" ref={el => elements.current[2] = el}>
+        <button onClick={() => toggleModal('SchoolProjects')} className="box">
           <img src='../schoolProjectBg.png'></img>
           <h3>SchoolProjects</h3>
         </button>
-        <button onClick={() => toggleModal('TechNews')} className="box" ref={el => elements.current[3] = el}>
+        <button onClick={() => toggleModal('TechNews')} className="box">
           <img src='../techNewsBg.png'></img>
           <h3>TechNews</h3>
         </button>
-        <button onClick={() => toggleModal('DiscordBot')} className="box" ref={el => elements.current[4] = el}>
+        <button onClick={() => toggleModal('DiscordBot')} className="box">
           <img src='../discord.png'></img>
           <h3>Discord</h3>
         </button>
-        <button onClick={() => toggleModal('SnakeTHEgame')} className="box" ref={el => elements.current[5] = el}>
+        <button onClick={() => toggleModal('SnakeTHEgame')} className="box">
           <img src='../snake.png'></img>
           <h3>SnakeTHEgame</h3>
         </button>
