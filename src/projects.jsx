@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { AiFillGithub } from 'react-icons/ai';
 import { TbBrandGooglePlay } from 'react-icons/tb';
-import { Parallax } from 'react-parallax';
 import animations from './animations';
 import './projects.css';
 
