@@ -1,7 +1,5 @@
-.sitePart {
-    padding-bottom: 25vh;
-    overflow: hidden;
-    height: 90vh;
+.sitePart{
+    height: max-content;
     width: -webkit-fill-available;
 }
 
@@ -10,6 +8,8 @@
     padding: 0;
     border: none;
     font-family: inherit;
+    transition: all ease-in-out .5s;
+    color: var(--font-color);
 }
 
 .box {
@@ -22,6 +22,7 @@
     cursor: pointer;
     background: none;
     width: inherit;
+    overflow: hidden;
     height: 100vh;
 }
 

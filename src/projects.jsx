@@ -76,24 +76,10 @@ const Projects = () => {
 
   const modalClassName = `modal ${modalVisible ? '' : 'hidden'}`;
 
-  const backgroundRef = useRef(null);
-  useEffect(() => {
-    const background = backgroundRef.current;
-
-    document.addEventListener('scroll', () => {
-      const scrollY = window.scrollY;
-      if(scrollY !== 0) {
-        background.style.backgroundPosition = `0px ${scrollY / 2}px`;
-      } else {
-        background.style.backgroundPosition = `0px 0px`;
-      }
-    });
-  });
-
   return (
     <>
       <h1 ref={el => elements.current[0] = el}><span className="anim">M</span><span className="anim">y</span><span className='space'></span><span className="anim">P</span><span className="anim">r</span><span className="anim">o</span><span className="anim">j</span><span className="anim">e</span><span className="anim">c</span><span className="anim">t</span><span className="anim">s</span></h1>
-      <div className="sitePart" id="projects" ref={backgroundRef}>
+      <div className="sitePart" id="projects">
         <button onClick={() => toggleModal('Borufi')} className="box">
           <img src='../borufi.png'></img>
           <h3>Borufi</h3>
@@ -115,6 +101,7 @@ const Projects = () => {
           <h3>SnakeTHEgame</h3>
         </button>
       </div>
+
       <div className={modalClassName}>
         {modalVisible && (
           <div className='modal-div'>

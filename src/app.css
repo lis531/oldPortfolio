@@ -28,11 +28,12 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 0.7rem;
+  transition: ease-in-out .5s;
+  width: 5px;
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--bar-color);
+  background: none;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -69,7 +70,7 @@ svg {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: color ease-in-out .5s, background-color ease-in-out .5s;
+  transition: all ease-in-out .5s;
   border: none;
   color: var(--font-color);
 }

@@ -28,6 +28,11 @@ function NavBar() {
         const sunButton = sunRef.current;
         const moonButton = moonRef.current;
 
+        if(localStorage.getItem("theme") === null) {
+            moonButton.firstElementChild.classList.add('activeMode');
+            sunButton.firstElementChild.classList.remove('activeMode');
+        }
+
         const theme = localStorage.getItem("theme");
         if (theme) {
             setColorMode(theme);
