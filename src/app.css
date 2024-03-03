@@ -13,6 +13,7 @@
   --box-shadow-color: #161616;
   --text-shadow-color: #353535;
   --additional-color: #cfcfcf;
+  --scrollbar-width: 0px;
 }
 
 a {
@@ -28,8 +29,16 @@ body {
 }
 
 body::-webkit-scrollbar {
-  transition: ease-in-out .5s;
-  width: 5px;
+  width: var(--scrollbar-width);
+}
+
+@keyframes changeWidth {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 5px;
+  }
 }
 
 body::-webkit-scrollbar-track {

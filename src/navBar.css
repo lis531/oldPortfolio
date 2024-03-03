@@ -8,7 +8,7 @@
     height: clamp(80px, 10vh, 25vh);
     font-size: 2.7rem;
     z-index: 90;
-    transition: background-color ease-in-out .5s, box-shadow ease-in-out .5s;
+    transition: background-color ease-in-out .5s, box-shadow ease-in-out .5s, border ease-in-out .5s;
 }
 
 .hover-animation {

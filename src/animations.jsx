@@ -18,6 +18,21 @@ const animations = (refs, options = {}) => {
     };
   }, [refs, options]);
 
+  const addScrollAnimation = () => {
+    let timeout = null;
+    document.addEventListener('scroll', () => {
+      console.log(window.scrollX);
+      if(window.scrollX == '0') {
+        document.documentElement.style.setProperty('--scrollbar-width', '5px')
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+          document.documentElement.style.setProperty('--scrollbar-width', '0px')
+        }, 1000);
+      }
+    });
+  };
+  addScrollAnimation();
+
   const addHoverAnimation = (className) => {
     const elements = document.querySelectorAll('.' + className);
 
