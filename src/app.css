@@ -13,7 +13,6 @@
   --box-shadow-color: #161616;
   --text-shadow-color: #353535;
   --additional-color: #cfcfcf;
-  --scrollbar-width: 0px;
 }
 
 a {
@@ -28,17 +27,18 @@ body {
   margin: 0;
 }
 
-body::-webkit-scrollbar {
-  width: var(--scrollbar-width);
+body {
+  margin: 0;
+  overflow: hidden;
+  transition: overflow-y 0.5s ease;
 }
 
-@keyframes changeWidth {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 5px;
-  }
+.scrollbar-visible {
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  width: var(--scrollbar-width);
 }
 
 body::-webkit-scrollbar-track {

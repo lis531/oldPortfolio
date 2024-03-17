@@ -21,12 +21,11 @@ const animations = (refs, options = {}) => {
   const addScrollAnimation = () => {
     let timeout = null;
     document.addEventListener('scroll', () => {
-      console.log(window.scrollX);
       if(window.scrollX == '0') {
-        document.documentElement.style.setProperty('--scrollbar-width', '5px')
+        document.documentElement.classList.add('scrollbar-visible');
         clearTimeout(timeout);
         timeout = setTimeout(() => {
-          document.documentElement.style.setProperty('--scrollbar-width', '0px')
+          document.documentElement.classList.remove('scrollbar-visible');
         }, 1000);
       }
     });
