@@ -19,18 +19,14 @@ a {
   text-decoration: inherit;  
 }
 
-a:hover {
-  color: #2160D4;
-}
-
 body {
   margin: 0;
 }
 
 body {
   margin: 0;
-  overflow: hidden;
-  transition: overflow-y 0.5s ease;
+  /* overflow: hidden;
+  transition: overflow-y 0.5s ease; */
 }
 
 .scrollbar-visible {
@@ -38,7 +34,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: var(--scrollbar-width);
+  width: 10px;
 }
 
 body::-webkit-scrollbar-track {

@@ -18,19 +18,19 @@ const animations = (refs, options = {}) => {
     };
   }, [refs, options]);
 
-  const addScrollAnimation = () => {
-    let timeout = null;
-    document.addEventListener('scroll', () => {
-      if(window.scrollX == '0') {
-        document.documentElement.classList.add('scrollbar-visible');
-        clearTimeout(timeout);
-        timeout = setTimeout(() => {
-          document.documentElement.classList.remove('scrollbar-visible');
-        }, 1000);
-      }
-    });
-  };
-  addScrollAnimation();
+  // const addScrollAnimation = () => {
+  //   let timeout = null;
+  //   document.addEventListener('scroll', () => {
+  //     if(window.scrollX == '0') {
+  //       document.documentElement.classList.add('scrollbar-visible');
+  //       clearTimeout(timeout);
+  //       timeout = setTimeout(() => {
+  //         document.documentElement.classList.remove('scrollbar-visible');
+  //       }, 1000);
+  //     }
+  //   });
+  // };
+  // addScrollAnimation();
 
   const addHoverAnimation = (className) => {
     const elements = document.querySelectorAll('.' + className);

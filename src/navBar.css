@@ -47,6 +47,14 @@
     font-weight: lighter;
 }
 
+.barPart1 > a {
+    transition: color ease-in-out .5s;
+}
+
+.barPart1 > a:hover {
+    color: #2160D4;
+}
+
 .barPart2 {
     display: flex;
     justify-content: center;
